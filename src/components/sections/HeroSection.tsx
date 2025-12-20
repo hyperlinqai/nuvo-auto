@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Award, Users, Clock } from "lucide-react";
+import { Award, Users, Clock } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   const scrollToEnquiry = () => {
@@ -23,14 +24,14 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/10 backdrop-blur-sm rounded-full border border-card/20 mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <Shield className="w-4 h-4 text-card" />
+            <img src={logo} alt="" className="w-5 h-5 brightness-0 invert" />
             <span className="text-sm font-medium text-card/90">AMFI Registered Mutual Fund Distributor</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-card leading-[1.1] mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Trusted Mutual Fund{" "}
-            <span className="text-teal-light">Distribution Services</span>{" "}
+            <span className="text-orange-light">Distribution Services</span>{" "}
             in Indore
           </h1>
 
