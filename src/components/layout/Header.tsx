@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,18 +25,19 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-[var(--shadow-sm)] py-3"
+          ? "bg-card/95 backdrop-blur-md shadow-[var(--shadow-sm)] py-2"
           : "bg-transparent py-4"
       }`}
     >
       <div className="container-narrow px-4 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <Shield className={`w-7 h-7 transition-colors ${isScrolled ? "text-accent" : "text-card"}`} />
-            <span className={`font-display font-bold text-xl transition-colors ${isScrolled ? "text-foreground" : "text-card"}`}>
-              Sats Finserv
-            </span>
+          <a href="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Sats Finserv" 
+              className={`transition-all duration-300 h-10 md:h-12`}
+            />
           </a>
 
           {/* Desktop Navigation */}
