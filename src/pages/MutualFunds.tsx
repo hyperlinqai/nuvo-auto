@@ -378,3 +378,4 @@ const MutualFunds = () => {
 
 export default MutualFunds;
 
+
