@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { TrendingUp, Briefcase, Award, Users } from "lucide-react";
 
 interface StatCardProps {
@@ -6,33 +7,15 @@ interface StatCardProps {
   number: string;
   label: string;
   delay: number;
+  isInView: boolean;
 }
 
-const StatCard = ({ icon, number, label, delay }: StatCardProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+const StatCard = ({ icon, number, label, delay, isInView }: StatCardProps) => {
+  const numericValue = parseInt(number.replace(/\D/g, ""));
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const numericValue = parseInt(number.replace(/\D/g, ''));
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
+    if (!isInView) return;
 
     const duration = 2000;
     const steps = 60;
@@ -50,78 +33,112 @@ const StatCard = ({ icon, number, label, delay }: StatCardProps) => {
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [isVisible, numericValue]);
+  }, [isInView, numericValue]);
 
   return (
-    <div 
-      ref={ref}
-      className={`stat-card opacity-0 ${isVisible ? 'animate-fade-up' : ''}`}
-      style={{ animationDelay: `${delay}s` }}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      className="stat-card"
     >
-      <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 text-accent mb-4">
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: delay + 0.2, type: "spring" }}
+        className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary mb-6"
+      >
         {icon}
-      </div>
-      <div className="text-4xl md:text-5xl font-display font-bold text-primary mb-2">
-        {count}{number.includes('+') ? '+' : ''}
-      </div>
-      <div className="text-muted-foreground font-medium">{label}</div>
-    </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: delay + 0.3 }}
+        className="text-5xl md:text-6xl font-bold text-primary mb-3 font-sans"
+      >
+        {count}{number.includes("+") ? "+" : ""}
+      </motion.div>
+      <div className="text-muted-foreground font-medium text-base">{label}</div>
+    </motion.div>
   );
 };
 
 const AboutSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section id="about" className="section-padding bg-background">
+    <section id="about" className="section-padding bg-background" ref={ref}>
       <div className="container-narrow">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
+        >
           <p className="section-title">Who We Are</p>
           <h2 className="section-heading mb-6">
-            A Legacy of Trust & <span className="text-accent">Reliability</span>
+            A Legacy of Trust & <span className="text-gradient">Reliability</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Sats Finserv is a SEBI-registered Mutual Fund Distribution firm committed to 
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+            SATS FINSERV Pvt Ltd is an AMFI-registered Mutual Fund Distributor committed to 
             supporting investors through structured processes, transparent operations, 
             and long-term professional relationships.
           </p>
-        </div>
+        </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <StatCard
-            icon={<TrendingUp className="w-6 h-6" />}
+            icon={<TrendingUp className="w-8 h-8" />}
             number="20+"
             label="Years of Experience"
             delay={0.1}
+            isInView={isInView}
           />
           <StatCard
-            icon={<Briefcase className="w-6 h-6" />}
+            icon={<Briefcase className="w-8 h-8" />}
             number="15+"
             label="Mutual Fund Products"
             delay={0.2}
+            isInView={isInView}
           />
           <StatCard
-            icon={<Award className="w-6 h-6" />}
+            icon={<Award className="w-8 h-8" />}
             number="10+"
             label="Certifications"
             delay={0.3}
+            isInView={isInView}
           />
           <StatCard
-            icon={<Users className="w-6 h-6" />}
+            icon={<Users className="w-8 h-8" />}
             number="200+"
             label="Happy Clients"
             delay={0.4}
+            isInView={isInView}
           />
         </div>
 
         {/* Additional Content */}
-        <div className="mt-16 text-center">
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-20 text-center"
+        >
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Our approach emphasizes continuity, trust, and long-term client relationships. 
             We focus on delivering consistent service quality while maintaining complete 
             transparency in all our interactions and documentation processes.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

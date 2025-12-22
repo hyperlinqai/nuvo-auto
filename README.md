@@ -1,73 +1,249 @@
-# Welcome to your Lovable project
+# SATS FINSERV - Modern Financial Services Website
 
-## Project info
+A modern, premium website for SATS FINSERV Pvt Ltd, an AMFI-registered Mutual Fund Distributor based in Indore, India. Built with cutting-edge React technologies and featuring a fintech-grade UI with smooth animations.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🎨 Design Features
 
-## How can I edit this code?
+- **Modern Fintech UI**: Clean, professional design with blue and muted green color palette
+- **Smooth Animations**: Framer Motion powered animations throughout
+- **Glassmorphism Effects**: Subtle glass-like UI elements for premium feel
+- **Responsive Design**: Mobile-first approach with thumb-friendly spacing
+- **Accessibility**: WCAG compliant with keyboard navigation support
+- **Performance Optimized**: Lazy loading, optimized animations, and efficient bundle size
 
-There are several ways of editing your application.
+## 🚀 Tech Stack
 
-**Use Lovable**
+### Core Framework
+- **React 18.3.1** - Modern React with hooks
+- **Vite 5.4.19** - Lightning-fast build tool
+- **TypeScript 5.8.3** - Type-safe development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### UI & Styling
+- **Tailwind CSS 3.4.17** - Utility-first CSS framework
+- **shadcn/ui** - High-quality React components
+- **Framer Motion** - Production-ready motion library for animations
+- **Lucide React** - Beautiful icon library
 
-Changes made via Lovable will be committed automatically to this repo.
+### Forms & Validation
+- **React Hook Form 7.61.1** - Performant forms with easy validation
+- **Zod 3.25.76** - TypeScript-first schema validation
 
-**Use your preferred IDE**
+### Additional Libraries
+- **React Router DOM 6.30.1** - Client-side routing
+- **React Helmet Async 2.0.5** - Document head management
+- **Sonner 1.7.4** - Toast notifications
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js 18+ and npm (or yarn/pnpm)
+- [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating) (recommended)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### Setup Steps
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd sats-finserv-launch
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production (outputs to `dist/`)
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality checks
+- `npm run generate-favicon` - Generate favicon files from SVG icon
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Project Structure
 
-## What technologies are used for this project?
+```
+sats-finserv-launch/
+├── public/                 # Static assets
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── icon.svg           # Source SVG for favicon
+│   └── ...
+├── src/
+│   ├── assets/            # Images and other assets
+│   │   └── logo.png
+│   ├── components/
+│   │   ├── layout/        # Layout components (Header, etc.)
+│   │   ├── sections/      # Page sections
+│   │   │   ├── HeroSection.tsx
+│   │   │   ├── AboutSection.tsx
+│   │   │   ├── OfferingsSection.tsx
+│   │   │   ├── ProcessSection.tsx
+│   │   │   ├── AdditionalOfferingsSection.tsx
+│   │   │   ├── TestimonialsSection.tsx
+│   │   │   ├── ContactSection.tsx
+│   │   │   └── Footer.tsx
+│   │   └── ui/            # shadcn/ui components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   ├── pages/             # Page components
+│   │   ├── Index.tsx
+│   │   └── NotFound.tsx
+│   ├── App.tsx            # Main app component
+│   ├── main.tsx           # Entry point
+│   └── index.css          # Global styles and design tokens
+├── scripts/
+│   └── generate-favicon.js # Favicon generation script
+└── package.json
+```
 
-This project is built with:
+## 🎯 Key Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Sections
 
-## How can I deploy this project?
+1. **Hero Section**
+   - Animated background with abstract shapes
+   - Staggered text reveal animations
+   - Gradient CTA buttons with hover effects
+   - Trust badges with micro-interactions
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+2. **About/Stats Section**
+   - Count-up animations for statistics
+   - Card-based layout with hover effects
+   - Responsive grid system
 
-## Can I connect a custom domain to my Lovable project?
+3. **Products & Services**
+   - Tab-based navigation (Products/Services)
+   - 7 Products: Mutual Funds, Bonds, FDs, NPS, Life Insurance, Health Insurance, SGBs
+   - 3 Services: Tax Saving, Child Future Saving, Retirement Saving
+   - Smooth expand/collapse animations
 
-Yes, you can!
+4. **Process Section**
+   - Animated vertical timeline
+   - Scroll-based progress indicator
+   - 7-step process visualization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+5. **Additional Offerings**
+   - Educational Videos
+   - Secure Client Login
+   - In-Person Support
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+6. **Testimonials**
+   - Client testimonials with long-term relationships
+   - Grid layout with hover effects
+
+7. **Contact/Enquiry Form**
+   - Glassmorphism design
+   - Form validation with React Hook Form + Zod
+   - Success animations
+   - Updated contact details
+
+### Animations
+
+- **Framer Motion** animations throughout
+- Fade + slide-up on section entry
+- Staggered animations for cards and lists
+- Number count-up animation for stats
+- Hover micro-interactions on buttons and cards
+- Scroll-triggered animations
+- Smooth page transitions
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Professional Blue (`hsl(217 91% 60%)`)
+- **Secondary**: Muted Green (`hsl(142 52% 45%)`)
+- **Accent**: Orange (`hsl(27 85% 52%)`)
+
+### Typography
+- **Display Font**: Playfair Display (headings)
+- **Body Font**: Inter (body text)
+
+### Spacing & Layout
+- Mobile-first responsive design
+- Container max-width: 7xl (1280px)
+- Section padding: 20-28 (vertical), 16-32 (horizontal)
+
+## ⚖️ SEBI Compliance
+
+All content is strictly SEBI-compliant:
+- ✅ No investment advice language
+- ✅ No scheme recommendations
+- ✅ No performance promises
+- ✅ Informational and facilitative tone only
+- ✅ Proper disclaimers included
+- ✅ No prohibited words (consultant, advisor, mentor, guide, recommendation)
+
+## 📱 Contact Information
+
+**SATS FINSERV Pvt Ltd**
+
+- **Address**: 409 & 411, Shalimar Corporate Centre, Beside Cosmos Bank, South Tukoganj, Behind High Court, Indore – 452001 (M.P)
+- **Phone**: +91-9009999833
+- **Email**: support@satsfinserv.in
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` directory, ready to be deployed to any static hosting provider.
+
+### Recommended Hosting Platforms
+
+- **Vercel** - Zero-config deployment (recommended)
+- **Netlify** - Easy static site hosting
+- **AWS S3 + CloudFront** - Enterprise-grade hosting
+- **GitHub Pages** - Free hosting for public repos
+
+### Environment Variables
+
+Currently, no environment variables are required. If you need to add API endpoints or other configuration, create a `.env` file:
+
+```env
+VITE_API_URL=your_api_url
+```
+
+## 🔧 Development
+
+### Code Style
+
+- ESLint configured for code quality
+- TypeScript for type safety
+- Prettier (if configured) for code formatting
+
+### Adding New Components
+
+1. Create component in `src/components/`
+2. Use shadcn/ui components from `src/components/ui/`
+3. Follow existing animation patterns with Framer Motion
+4. Maintain SEBI compliance in all content
+
+### Customization
+
+- **Colors**: Update CSS variables in `src/index.css`
+- **Fonts**: Modify `@import` in `src/index.css`
+- **Animations**: Adjust Framer Motion variants in components
+- **Content**: Update section components in `src/components/sections/`
+
+## 📄 License
+
+© 2024 SATS FINSERV Pvt Ltd. All rights reserved.
+
+## ⚠️ Disclaimer
+
+Mutual fund investments are subject to market risks. Please read all scheme related documents carefully. SATS FINSERV Pvt Ltd is a Mutual Fund Distributor registered with AMFI and does not provide investment advisory services or guarantee returns. All transactions are executed solely based on investor instructions.
+
+---
+
+Built with ❤️ using modern web technologies

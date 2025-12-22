@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Perfect circle background -->
+  <circle cx="100" cy="100" r="100" fill="#1a3a5f"/>
+  
+  <!-- Orange segment (right side) - forms the S curve -->
+  <path d="M 100 0 
+           C 150 0, 200 50, 200 100
+           C 200 120, 190 140, 170 160
+           C 150 180, 120 200, 100 200
+           C 50 200, 0 150, 0 100
+           C 0 80, 10 60, 30 40
+           C 50 20, 80 0, 100 0 Z" 
+        fill="#ff6b35"/>
+  
+  <!-- Blue segment (left side) - creates the negative S space -->
+  <path d="M 100 0 
+           C 80 0, 60 10, 40 30
+           C 20 50, 0 80, 0 100
+           C 0 150, 50 200, 100 200
+           C 120 200, 140 190, 160 170
+           C 180 150, 200 120, 200 100
+           C 200 50, 150 0, 100 0 Z" 
+        fill="#1a3a5f"/>
+</svg>
