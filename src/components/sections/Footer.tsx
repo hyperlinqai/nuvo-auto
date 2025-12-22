@@ -30,7 +30,7 @@ const Footer = () => {
               </motion.div>
               <p className="text-white/80 text-sm leading-relaxed mb-6 font-light">
                 AMFI Registered Mutual Fund Distributor serving investors in Indore 
-                with transparent processes and long-term support.
+                with transparent processes and long term support.
               </p>
             </div>
 

@@ -89,7 +89,7 @@ const HeroSection = () => {
             className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed font-light"
           >
             Supporting investors with transparent processes, disciplined documentation, 
-            and long-term operational support for over two decades.
+            and long term operational support for over two decades.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -117,7 +117,7 @@ const HeroSection = () => {
             {[
               { icon: Award, text: "20+ Years Experience" },
               { icon: Users, text: "200+ Clients Served" },
-              { icon: Clock, text: "Process-Driven Approach" },
+              { icon: Clock, text: "Process Driven Approach" },
             ].map((badge, index) => {
               const Icon = badge.icon;
               return (

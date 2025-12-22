@@ -50,8 +50,8 @@ const points = [
 
 const keynotes = [
   "Start early to benefit from compounding and smoother cash flows.",
-  "Break goals into milestones (education, skill-building, contingencies).",
-  "Use child-focused protection (life/medical) to secure planned objectives.",
+  "Break goals into milestones (education, skill building, contingencies).",
+  "Use child focused protection (life/medical) to secure planned objectives.",
 ];
 
 const steps = [

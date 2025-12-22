@@ -88,7 +88,7 @@ const CompanyProfile = () => {
                   SATS FINSERV Private Limited
                 </h1>
                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                  Established in 2017, SATS FINSERV is an AMFI-registered Mutual Fund Distributor with 35+ years of combined experience, serving 1500+ families across India and abroad.
+                  Established in 2017, SATS FINSERV is an AMFI registered Mutual Fund Distributor with 35+ years of combined experience, serving 1500+ families across India and abroad.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Button
@@ -166,12 +166,12 @@ const CompanyProfile = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     SATS FINSERV Pvt Ltd is registered with AMFI as a Mutual Fund Distributor. With a
                     combined experience of more than 35+ years in Risk Management and Investment
-                    Management, the team offers financial services to HNIs, corporates, and family-run
+                    Management, the team offers financial services to HNIs, corporates, and family run
                     businesses.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     Success is measured by helping clients meet their financial goals and objectives.
-                    SATS FINSERV facilitates well-researched financial products and currently works
+                    SATS FINSERV facilitates well researched financial products and currently works
                     with 1500+ families across India and abroad.
                   </p>
                 </motion.div>
@@ -191,7 +191,7 @@ const CompanyProfile = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                      <span>AMFI-registered Mutual Fund Distributor</span>
+                      <span>AMFI registered Mutual Fund Distributor</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
@@ -199,7 +199,7 @@ const CompanyProfile = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                      <span>Serving HNIs, corporates, and family-run businesses</span>
+                      <span>Serving HNIs, corporates, and family run businesses</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
@@ -238,13 +238,13 @@ const CompanyProfile = () => {
                       title: "Vision",
                       icon: Eye,
                       copy:
-                        "To be a trusted distribution partner known for transparent processes, disciplined execution, and long-term client relationships.",
+                        "To be a trusted distribution partner known for transparent processes, disciplined execution, and long term client relationships.",
                     },
                     {
                       title: "Mission",
                       icon: Target,
                       copy:
-                        "To facilitate well-researched financial products, keep investors informed at every step, and execute instructions accurately and efficiently.",
+                        "To facilitate well researched financial products, keep investors informed at every step, and execute instructions accurately and efficiently.",
                     },
                   ].map((item) => {
                     const Icon = item.icon;
@@ -281,7 +281,7 @@ const CompanyProfile = () => {
                     <div>
                       <h3 className="text-xl font-semibold text-foreground mb-2">Philosophy</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        We believe in compliance-first operations, clarity in documentation, and consistent
+                        We believe in compliance first operations, clarity in documentation, and consistent
                         communication so investors can make informed decisions.
                       </p>
                     </div>

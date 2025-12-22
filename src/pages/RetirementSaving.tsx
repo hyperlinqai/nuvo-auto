@@ -35,18 +35,18 @@ const stagger = {
 const points = [
   {
     icon: Target,
-    title: "Goal-Based Corpus Building",
-    desc: "Facilitation for building retirement corpus through systematic investment options aligned with your post-retirement lifestyle goals.",
+    title: "Goal Based Corpus Building",
+    desc: "Facilitation for building retirement corpus through systematic investment options aligned with your post retirement lifestyle goals.",
   },
   {
     icon: Clock,
     title: "Early Start Advantage",
-    desc: "Information on how starting early—even with modest amounts—can help accumulate meaningful corpus over time through compounding.",
+    desc: "Information on how starting early, even with modest amounts, can help accumulate meaningful corpus over time through compounding.",
   },
   {
     icon: Landmark,
     title: "Regulated Investment Options",
-    desc: "Access to pension-oriented products like NPS and other long-term investment avenues regulated by PFRDA and SEBI.",
+    desc: "Access to pension oriented products like NPS and other long term investment avenues regulated by PFRDA and SEBI.",
   },
 ];
 
@@ -57,16 +57,16 @@ const benefits = [
 ];
 
 const features = [
-  "Determine your post-retirement income needs based on lifestyle and expenses.",
+  "Determine your post retirement income needs based on lifestyle and expenses.",
   "Calculate required investment amounts to achieve targeted corpus.",
-  "Choose appropriate investment-cum-retirement products for lump sum or periodic income.",
+  "Choose appropriate investment cum retirement products for lump sum or periodic income.",
 ];
 
 const steps = [
   {
     icon: Sparkles,
     title: "Define Retirement Goals",
-    desc: "Clarify how much monthly income you'd need post-retirement and desired lifestyle expectations.",
+    desc: "Clarify how much monthly income you'd need post retirement and desired lifestyle expectations.",
   },
   {
     icon: BarChart3,
@@ -76,7 +76,7 @@ const steps = [
   {
     icon: PiggyBank,
     title: "Select Suitable Products",
-    desc: "Access pension plans, NPS, and retirement-focused mutual fund categories based on your timeline.",
+    desc: "Access pension plans, NPS, and retirement focused mutual fund categories based on your timeline.",
   },
   {
     icon: ShieldCheck,

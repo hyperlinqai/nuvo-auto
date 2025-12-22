@@ -23,7 +23,7 @@ const products = [
   {
     icon: Building2,
     title: "Bonds",
-    description: "Corporate and government bonds with defined tenure and interest structure, including options with half-yearly payout and long-term tenure.",
+    description: "Corporate and government bonds with defined tenure and interest structure, including options with half yearly payout and long term tenure.",
   },
   {
     icon: PiggyBank,
@@ -33,17 +33,17 @@ const products = [
   {
     icon: Users,
     title: "New Pension Scheme (NPS)",
-    description: "Pension-oriented long-term savings product regulated by PFRDA, designed for retirement savings and long-term wealth accumulation.",
+    description: "Pension oriented long term savings product regulated by PFRDA, designed for retirement savings and long term wealth accumulation.",
   },
   {
     icon: Shield,
     title: "Insurance (Life & Health)",
-    description: "Insurance products focused on financial protection, long-term security, and health coverage including hospitalization support.",
+    description: "Insurance products focused on financial protection, long term security, and health coverage including hospitalization support.",
   },
   {
     icon: Coins,
     title: "Sovereign Gold Bonds (SGBs)",
-    description: "Government-issued gold-linked securities as an alternative to holding physical gold, providing gold exposure with additional benefits.",
+    description: "Government issued gold linked securities as an alternative to holding physical gold, providing gold exposure with additional benefits.",
   },
 ];
 
@@ -51,17 +51,17 @@ const services = [
   {
     icon: FileSpreadsheet,
     title: "Tax Saving Support",
-    description: "Information and facilitation for investments eligible under prevailing tax regulations, helping you understand tax-saving investment options.",
+    description: "Information and facilitation for investments eligible under prevailing tax regulations, helping you understand tax saving investment options.",
   },
   {
     icon: GraduationCap,
     title: "Child Future Saving",
-    description: "Support in accessing suitable investment and insurance products aligned with education and future needs, facilitating goal-based investment facilitation.",
+    description: "Support in accessing suitable investment and insurance products aligned with education and future needs, facilitating goal based investment facilitation.",
   },
   {
     icon: Calendar,
     title: "Retirement Saving",
-    description: "Long-term investment product facilitation with periodic information sharing and monitoring support, designed for retirement savings objectives.",
+    description: "Long term investment product facilitation with periodic information sharing and monitoring support, designed for retirement savings objectives.",
   },
 ];
 

@@ -42,15 +42,15 @@ const points = [
   },
   {
     icon: Building2,
-    title: "Employer-Aided Benefits",
+    title: "Employer Aided Benefits",
     desc: "Mapping eligible allowances and reimbursements within employer frameworks to ensure compliant submissions.",
   },
 ];
 
 const keynotes = [
   "A careful understanding of provisions can reduce taxable income within regulations.",
-  "Start early in the financial year; use periodic contributions to avoid last-minute rush.",
-  "Prefer tax-efficient avenues so potential returns are not eroded by unnecessary tax outflow.",
+  "Start early in the financial year; use periodic contributions to avoid last minute rush.",
+  "Prefer tax efficient avenues so potential returns are not eroded by unnecessary tax outflow.",
 ];
 
 const steps = [
@@ -67,7 +67,7 @@ const steps = [
   {
     icon: Clock3,
     title: "Plan Contributions Early",
-    desc: "Spread eligible investments across the year to manage cash flows and reduce last-minute pressure.",
+    desc: "Spread eligible investments across the year to manage cash flows and reduce last minute pressure.",
   },
   {
     icon: CheckCircle2,
@@ -153,7 +153,7 @@ const TaxSavingSupport = () => {
                 <p className="section-title">Overview</p>
                 <h2 className="section-heading mb-4">Informational Tax Facilitation</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We focus on making tax-related components clear—what applies, what documents are needed, and how to submit them on time—so you stay compliant and reduce avoidable tax outflow.
+                  We focus on making tax related components clear—what applies, what documents are needed, and how to submit them on time—so you stay compliant and reduce avoidable tax outflow.
                 </p>
               </motion.div>
 
@@ -197,7 +197,7 @@ const TaxSavingSupport = () => {
                 <p className="section-title">Keynotes</p>
                 <h2 className="section-heading mb-4">Practical Takeaways</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Simple, actionable reminders to stay compliant and avoid last-minute stress.
+                  Simple, actionable reminders to stay compliant and avoid last minute stress.
                 </p>
               </motion.div>
 
