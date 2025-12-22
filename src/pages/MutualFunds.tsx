@@ -54,7 +54,7 @@ const advantages = [
   {
     icon: ShieldCheck,
     title: "Professional Management",
-    desc: "Investors purchase funds because they do not have the time or expertise to manage their own portfolio. A mutual fund provides a full-time manager to make and monitor investments.",
+    desc: "Investors purchase funds because they do not have the time or expertise to manage their own portfolio. A mutual fund provides a full time manager to make and monitor investments.",
   },
   {
     icon: PieChart,

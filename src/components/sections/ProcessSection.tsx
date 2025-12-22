@@ -94,7 +94,7 @@ const ProcessSection = () => {
         >
           <p className="section-title">How We Do It</p>
           <h2 className="section-heading mb-6">
-            Our Structured <span className="text-gradient">7-Step Process</span>
+            Our Structured <span className="text-gradient">7 Step Process</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             A disciplined, compliant methodology ensuring transparency and operational excellence at every stage.

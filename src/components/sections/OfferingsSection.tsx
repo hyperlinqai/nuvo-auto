@@ -18,7 +18,7 @@ const products = [
   {
     icon: TrendingUp,
     title: "Mutual Funds",
-    description: "Access to various mutual fund categories including equity, debt, hybrid, and solution-oriented schemes. Detailed information available under 'About Mutual Fund' section.",
+    description: "Access to various mutual fund categories including equity, debt, hybrid, and solution oriented schemes. Detailed information available under 'About Mutual Fund' section.",
   },
   {
     icon: Building2,

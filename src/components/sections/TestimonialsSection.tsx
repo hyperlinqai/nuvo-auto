@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Param Deep Singh",
     duration: "Client for 15+ Years",
-    content: "Our association with Sats Finserv spans over fifteen years. What stands out is their consistent approach and unwavering commitment to transparent processes. They have been a reliable partner in facilitating our mutual fund transactions, always ensuring complete clarity in documentation and regular updates. Their disciplined methodology and long-term relationship focus make them truly dependable.",
+    content: "Our association with Sats Finserv spans over fifteen years. What stands out is their consistent approach and unwavering commitment to transparent processes. They have been a reliable partner in facilitating our mutual fund transactions, always ensuring complete clarity in documentation and regular updates. Their disciplined methodology and long term relationship focus make them truly dependable.",
   },
   {
     name: "Murli Dhar Gandhi",

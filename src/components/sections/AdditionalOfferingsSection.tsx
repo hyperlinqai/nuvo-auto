@@ -14,8 +14,8 @@ const additionalOfferings = [
   },
   {
     icon: MapPin,
-    title: "In-Person Support",
-    description: "In-person support available at our Indore office, providing personalized assistance and addressing your queries face-to-face.",
+    title: "In Person Support",
+    description: "In person support available at our Indore office, providing personalized assistance and addressing your queries face to face.",
   },
 ];
 

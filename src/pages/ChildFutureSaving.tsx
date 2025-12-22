@@ -39,7 +39,7 @@ const points = [
   {
     icon: PiggyBank,
     title: "Systematic Saving",
-    desc: "Structure periodic contributions to spread costs and reduce last-minute funding pressure.",
+    desc: "Structure periodic contributions to spread costs and reduce last minute funding pressure.",
   },
   {
     icon: ShieldCheck,
@@ -236,7 +236,7 @@ const ChildFutureSaving = () => {
                 className="text-center mb-12"
               >
                 <p className="section-title">How We Facilitate</p>
-                <h2 className="section-heading mb-4">Structured 4-Step Flow</h2>
+                <h2 className="section-heading mb-4">Structured 4 Step Flow</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A simple, repeatable process to keep your child’s objectives organized and funded.
                 </p>

@@ -16,7 +16,7 @@ const Index = () => {
         <title>Mutual Fund Distributor in Indore | Sats Finserv</title>
         <meta 
           name="description" 
-          content="Sats Finserv is a trusted mutual fund distributor in Indore with 20+ years of experience, supporting investors through transparent processes and long-term service." 
+          content="Sats Finserv is a trusted mutual fund distributor in Indore with 20+ years of experience, supporting investors through transparent processes and long term service." 
         />
         <meta name="keywords" content="mutual fund distributor indore, AMFI registered distributor, mutual fund services, sats finserv" />
         <link rel="canonical" href="https://satsfinserv.com" />

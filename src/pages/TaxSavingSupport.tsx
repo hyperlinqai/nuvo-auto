@@ -235,7 +235,7 @@ const TaxSavingSupport = () => {
                 className="text-center mb-12"
               >
                 <p className="section-title">How We Facilitate</p>
-                <h2 className="section-heading mb-4">Simple 4-Step Flow</h2>
+                <h2 className="section-heading mb-4">Simple 4 Step Flow</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A structured, compliant approach to keep every submission clear and timely.
                 </p>

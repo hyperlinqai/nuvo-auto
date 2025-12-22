@@ -92,7 +92,7 @@ const RetirementSaving = () => {
         <title>Retirement Saving | SATS FINSERV</title>
         <meta
           name="description"
-          content="Retirement Saving facilitation from SATS FINSERV: structured support for building retirement corpus through NPS, pension plans, and long-term investment products."
+          content="Retirement Saving facilitation from SATS FINSERV: structured support for building retirement corpus through NPS, pension plans, and long term investment products."
         />
       </Helmet>
 
@@ -284,7 +284,7 @@ const RetirementSaving = () => {
                 className="text-center mb-12"
               >
                 <p className="section-title">How We Facilitate</p>
-                <h2 className="section-heading mb-4">Simple 4-Step Flow</h2>
+                <h2 className="section-heading mb-4">Simple 4 Step Flow</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A structured approach to help you build and monitor your retirement corpus systematically.
                 </p>
