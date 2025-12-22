@@ -80,7 +80,7 @@ const advantages = [
 
 const keyPoints = [
   "Mutual funds are one of the best investments ever created because they are cost efficient and easy to invest in.",
-  "You don't have to figure out which stocks or bonds to buy—the fund manager handles that for you.",
+  "You don't have to figure out which stocks or bonds to buy. The fund manager handles that for you.",
   "Helps individual investors to invest in equity and debt securities simultaneously for diversification.",
   "The more stocks and bonds you own through a fund, the less any one of them can hurt you.",
 ];
@@ -320,7 +320,7 @@ const MutualFunds = () => {
                       The idea behind diversification is to invest in a number of assets so that a loss in any particular investment is minimized by gains in others. In other words, the more stocks and bonds you own, the less any one of them can hurt you.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Large mutual funds typically own hundreds of different stocks in many different industries. It wouldn't be possible for a small investor to build this kind of portfolio with a small amount of money—but through mutual funds, this becomes accessible to everyone.
+                      Large mutual funds typically own hundreds of different stocks in many different industries. It wouldn't be possible for a small investor to build this kind of portfolio with a small amount of money, but through mutual funds, this becomes accessible to everyone.
                     </p>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ const MutualFunds = () => {
                   Start Your Mutual Fund Journey
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Buying a mutual fund is easy! The minimum investment is very small—as little as Rs 500 can be invested on a monthly basis. Contact us to know more about how to get started.
+                  Buying a mutual fund is easy! The minimum investment is very small, as little as Rs 500 can be invested on a monthly basis. Contact us to know more about how to get started.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button

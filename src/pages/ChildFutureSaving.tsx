@@ -58,7 +58,7 @@ const steps = [
   {
     icon: Target,
     title: "Define Child Goals",
-    desc: "List key milestones—education phases, skill programs, and major life events—and estimate timelines.",
+    desc: "List key milestones: education phases, skill programs, and major life events, and estimate timelines.",
   },
   {
     icon: Sparkles,
@@ -154,7 +154,7 @@ const ChildFutureSaving = () => {
                 <p className="section-title">Overview</p>
                 <h2 className="section-heading mb-4">Structured Child Goal Facilitation</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Break down your child’s key milestones—education, skills, contingencies—and align saving, documentation, and protection so each goal is prepared for in advance.
+                  Break down your child's key milestones such as education, skills, and contingencies, and align saving, documentation, and protection so each goal is prepared for in advance.
                 </p>
               </motion.div>
 

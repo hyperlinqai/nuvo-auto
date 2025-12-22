@@ -125,7 +125,7 @@ const RetirementSaving = () => {
                   Retirement Saving
                 </h1>
                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                  Retirement is the ultimate reality for every working professional—and it should be the most enjoyable phase of life. Effective retirement assessment helps you retain financial independence even after your work life ends.
+                  Retirement is the ultimate reality for every working professional and it should be the most enjoyable phase of life. Effective retirement assessment helps you retain financial independence even after your work life ends.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Button
@@ -162,7 +162,7 @@ const RetirementSaving = () => {
                 <p className="section-title">Overview</p>
                 <h2 className="section-heading mb-4">Why Retirement Saving Matters</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Retirement assessment is never too late—though ideal if you start at a young age. Your future largely depends on choices you make today. An individual can maintain high standards of living with effective retirement planning.
+                  Retirement assessment is never too late, though ideal if you start at a young age. Your future largely depends on choices you make today. An individual can maintain high standards of living with effective retirement planning.
                 </p>
               </motion.div>
 

@@ -116,7 +116,7 @@ const TaxSavingSupport = () => {
                   Tax Saving Support
                 </h1>
                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                  Structured, compliant support to understand eligible tax components—beyond Section 80C—covering HRA, home loans, medical deductions, LTA, and reimbursements with clear documentation.
+                  Structured, compliant support to understand eligible tax components beyond Section 80C, covering HRA, home loans, medical deductions, LTA, and reimbursements with clear documentation.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Button
@@ -153,7 +153,7 @@ const TaxSavingSupport = () => {
                 <p className="section-title">Overview</p>
                 <h2 className="section-heading mb-4">Informational Tax Facilitation</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We focus on making tax related components clear—what applies, what documents are needed, and how to submit them on time—so you stay compliant and reduce avoidable tax outflow.
+                  We focus on making tax related components clear: what applies, what documents are needed, and how to submit them on time, so you stay compliant and reduce avoidable tax outflow.
                 </p>
               </motion.div>
 
