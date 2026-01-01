@@ -8,8 +8,6 @@ import AdditionalOfferingsSection from "@/components/sections/AdditionalOffering
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
-import MarketTicker from "@/components/ui/MarketTicker";
-
 const Index = () => {
   return (
     <>
@@ -35,7 +33,7 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen">
-        <Header topBar={<MarketTicker />} />
+        <Header />
         <main>
           <HeroSection />
           <AboutSection />
@@ -46,7 +44,7 @@ const Index = () => {
           <ContactSection />
         </main>
         <Footer />
-      </div>
+      </div >
     </>
   );
 };

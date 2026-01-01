@@ -3,6 +3,7 @@ import { motion, AnimatePresence, type HTMLMotionProps, type Transition } from "
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import MarketTicker from "@/components/ui/MarketTicker";
 
 type HeaderProps = {
   solid?: boolean;
@@ -54,6 +55,12 @@ const Header = ({ solid = false, topBar }: HeaderProps) => {
       {topBar && (
         <div className="w-full relative z-50">
           {topBar}
+        </div>
+      )}
+      {/* Global Market Ticker */}
+      {!topBar && (
+        <div className="w-full relative z-50">
+          <MarketTicker />
         </div>
       )}
       <div className={`w-full ${isSolid ? "py-3" : "py-6"} transition-all duration-300`}>
