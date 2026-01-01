@@ -29,10 +29,10 @@ const teamMembers = [
     image: "/team/Mr%20sanjeev%20kumar.png",
   },
   {
-    name: "Mrs. Rishabha Arondekar",
+    name: "Rahul Joshi",
     role: "Director",
-    bio: "M.Phil in Accounting & Finance (Vikram University), visiting faculty at IPS, Vaishnav College, and Daga College Raipur. Qualified for Million Dollar Round Table Club in 2020.",
-    image: "/team/Mrs.%20Rishabha%20Arondekar%20.png",
+    bio: "17+ years of expertise in the Asset Management Industry. Held key positions at ICICI Prudential and L&T Investment Management, specializing in Investment strategies and Risk management.",
+    image: "/team/Rahul%20Joshi.png",
   },
   {
     name: "Mrs. Amita Sharma",
@@ -325,7 +325,7 @@ const CompanyProfile = () => {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-top"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />

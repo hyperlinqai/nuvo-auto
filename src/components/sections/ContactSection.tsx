@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { Captcha } from "@/components/ui/Captcha";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -22,6 +23,8 @@ const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isCaptchaValid, setIsCaptchaValid] = useState(false);
+  const [captchaKey, setCaptchaKey] = useState(0);
 
   const {
     register,
@@ -33,12 +36,22 @@ const ContactSection = () => {
   });
 
   const onSubmit = async (data: FormData) => {
+    if (!isCaptchaValid) {
+      toast({
+        title: "Security Check Failed",
+        description: "Please correctly answer the security question.",
+        variant: "destructive",
+      });
+      return;
+    }
     setIsSubmitting(true);
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
     setIsSubmitting(false);
     setIsSubmitted(true);
     reset();
+    setCaptchaKey((prev) => prev + 1);
+    setIsCaptchaValid(false);
     toast({
       title: "Enquiry Submitted!",
       description: "We'll get back to you within 24 hours.",
@@ -65,7 +78,7 @@ const ContactSection = () => {
               Visit Our <span className="text-gradient">Office</span>
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed text-lg font-light">
-              We welcome you to visit our office for any enquiries or to 
+              We welcome you to visit our office for any enquiries or to
               discuss how we can assist with your mutual fund requirements.
             </p>
 
@@ -199,6 +212,9 @@ const ContactSection = () => {
                       <p className="text-sm text-destructive mt-2">{errors.message.message}</p>
                     )}
                   </div>
+                  <div>
+                    <Captcha key={captchaKey} onValidate={setIsCaptchaValid} />
+                  </div>
                   <Button
                     type="submit"
                     size="lg"
@@ -219,8 +235,8 @@ const ContactSection = () => {
 
               {/* Form Disclaimer */}
               <p className="text-xs text-muted-foreground mt-6 leading-relaxed">
-                <strong className="text-foreground">Disclaimer:</strong> Mutual fund investments are subject to market risks. Please read all scheme related documents carefully. 
-                SATS FINSERV Pvt Ltd is a Mutual Fund Distributor registered with AMFI and does not provide investment advisory services or guarantee returns. 
+                <strong className="text-foreground">Disclaimer:</strong> Mutual fund investments are subject to market risks. Please read all scheme related documents carefully.
+                SATS FINSERV Pvt Ltd is a Mutual Fund Distributor registered with AMFI and does not provide investment advisory services or guarantee returns.
                 All transactions are executed solely based on investor instructions.
               </p>
             </div>
