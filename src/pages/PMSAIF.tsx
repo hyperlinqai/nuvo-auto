@@ -4,16 +4,15 @@ import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
+    TrendingUp,
+    Users,
     Shield,
-    HeartPulse,
-    Car,
-    Home,
-    Briefcase,
-    Plane,
+    Target,
     CheckCircle2,
-    Coins,
-    ArrowRightLeft,
-    Umbrella,
+    Briefcase,
+    BarChart3,
+    Gem,
+    IndianRupee,
 } from "lucide-react";
 
 const fadeUp = {
@@ -34,65 +33,65 @@ const stagger = {
 
 const howItWorks = [
     {
-        icon: Shield,
-        title: "Assess Risk",
-        desc: "Identify the assets or liabilities you need to protect, whether it's your health, vehicle, home, or business.",
+        icon: Users,
+        title: "Choose Manager",
+        desc: "Select a SEBI-registered portfolio manager or AIF based on their track record, strategy, and investment philosophy.",
     },
     {
-        icon: Umbrella,
-        title: "Choose Cover",
-        desc: "Select a general insurance plan that provides adequate coverage for potential risks and damages.",
+        icon: Briefcase,
+        title: "Invest Capital",
+        desc: "Meet the minimum investment threshold (₹50 Lakhs for PMS, ₹1 Crore for AIF) and sign the investment agreement.",
     },
     {
-        icon: CheckCircle2,
-        title: "Stay Protected",
-        desc: "Pay premiums to safeguard against financial losses arising from unforeseen events like accidents, illness, or theft.",
+        icon: BarChart3,
+        title: "Portfolio Creation",
+        desc: "The fund manager creates a personalized portfolio based on your risk profile and investment objectives.",
     },
 ];
 
 const advantages = [
     {
-        icon: HeartPulse,
-        title: "Health Protection",
-        desc: "Health insurance covers medical expenses, ensuring you receive quality healthcare without depleting your savings.",
+        icon: TrendingUp,
+        title: "Higher Return Potential",
+        desc: "Professional managers can generate alpha through active management, stock selection, and tactical decisions.",
     },
     {
-        icon: Car,
-        title: "Motor Insurance",
-        desc: "Mandatory by law, it protects against liability and damages to your vehicle, as well as third-party liabilities.",
+        icon: Target,
+        title: "Customized Strategy",
+        desc: "PMS offers personalized portfolios tailored to your specific financial goals, risk appetite, and investment horizon.",
     },
     {
-        icon: Home,
-        title: "Home Insurance",
-        desc: "Safeguards your home and its contents against risks like fire, theft, and natural calamities.",
+        icon: Shield,
+        title: "SEBI Regulated",
+        desc: "Both PMS and AIFs are regulated by SEBI, ensuring transparency, investor protection, and professional governance.",
     },
     {
-        icon: Plane,
-        title: "Travel Insurance",
-        desc: "Covers trip cancellations, medical emergencies, and lost luggage while you are traveling domestically or abroad.",
+        icon: Gem,
+        title: "Exclusive Access",
+        desc: "Gain access to sophisticated investment strategies, pre-IPO opportunities, and alternative asset classes not available to retail investors.",
     },
     {
-        icon: Briefcase,
-        title: "Business Protection",
-        desc: "Protects businesses against operational risks, including property damage, liability claims, and employee-related risks.",
+        icon: Users,
+        title: "Expert Management",
+        desc: "Your money is managed by seasoned investment professionals with deep market expertise and research capabilities.",
     },
 ];
 
 const keyPoints = [
-    "General insurance contracts are typically for a shorter duration, usually one year, renewable annually.",
-    "It provides financial protection against loss or damage to your assets.",
-    "Covers a wide range of needs including Health, Motor, Travel, and Home insurance.",
-    "We help facilitate the purchase of policies that best fit your specific protection needs.",
+    "PMS (Portfolio Management Services) provides individualized portfolio management with a minimum investment of ₹50 Lakhs.",
+    "AIFs (Alternative Investment Funds) pool money from sophisticated investors to invest in alternative asset classes.",
+    "Category I AIFs invest in startups, SMEs, and social ventures. Category II includes private equity and debt funds. Category III focuses on hedge funds.",
+    "We help facilitate access to top-rated PMS and AIF products from leading fund houses.",
 ];
 
-const GeneralInsurance = () => {
+const PMSAIF = () => {
     return (
         <>
             <Helmet>
-                <title>General Insurance | SATS FINSERV</title>
+                <title>PMS & AIF | SATS FINSERV</title>
                 <meta
                     name="description"
-                    content="Explore General Insurance solutions including Health, Motor, and Home insurance with SATS FINSERV. Protect your assets and health with our compliant facilitation."
+                    content="Explore Portfolio Management Services (PMS) and Alternative Investment Funds (AIF) with SATS FINSERV. Access professional wealth management for high net worth investors."
                 />
             </Helmet>
 
@@ -122,10 +121,10 @@ const GeneralInsurance = () => {
                             >
                                 <p className="section-title text-white/80">Product</p>
                                 <h1 className="section-heading text-white mb-6">
-                                    General Insurance
+                                    PMS & AIF
                                 </h1>
                                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                                    General insurance covers non-life assets such as your home, vehicle, and health, providing financial protection against unforeseen liabilities and damages.
+                                    Portfolio Management Services and Alternative Investment Funds offer sophisticated investment strategies for high net worth individuals seeking professional wealth management.
                                 </p>
                                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                                     <Button
@@ -134,7 +133,7 @@ const GeneralInsurance = () => {
                                         className="bg-white text-primary hover:bg-white/90 px-7 h-12 font-semibold"
                                         onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
                                     >
-                                        Get Protected
+                                        Get Started
                                     </Button>
                                     <Button
                                         variant="outline"
@@ -149,7 +148,7 @@ const GeneralInsurance = () => {
                         </div>
                     </section>
 
-                    {/* What is General Insurance */}
+                    {/* What is PMS/AIF */}
                     <section className="section-padding bg-background">
                         <div className="container-narrow max-w-5xl">
                             <motion.div
@@ -160,9 +159,9 @@ const GeneralInsurance = () => {
                                 className="text-center mb-12"
                             >
                                 <p className="section-title">Overview</p>
-                                <h2 className="section-heading mb-4">What is General Insurance?</h2>
+                                <h2 className="section-heading mb-4">What are PMS & AIF?</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                                    General Insurance refers to any insurance that is not determined to be life insurance. It basically comprises of insurance of property against fire, burglary, etc., personal insurance such as Accident and Health Insurance, and liability insurance covering legal liabilities.
+                                    PMS and AIF are premium investment vehicles designed for sophisticated investors. PMS offers personalized portfolio management with direct stock ownership, while AIFs provide access to alternative investment strategies including private equity, venture capital, and hedge funds.
                                 </p>
                             </motion.div>
 
@@ -202,7 +201,7 @@ const GeneralInsurance = () => {
                                 <p className="section-title">Process</p>
                                 <h2 className="section-heading mb-4">How It Works</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                                    By paying a premium, you transfer the risk of financial loss to the insurance company. In the event of a covered loss, the insurer compensates you, helping you recover financially.
+                                    Investing in PMS or AIF involves selecting a qualified manager, completing the investment formalities, and receiving ongoing professional management of your portfolio.
                                 </p>
                             </motion.div>
 
@@ -243,12 +242,12 @@ const GeneralInsurance = () => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="w-11 h-11 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
-                                        <ArrowRightLeft className="w-5 h-5" />
+                                        <IndianRupee className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-foreground mb-2">Claim Settlement</h3>
+                                        <h3 className="text-lg font-semibold text-foreground mb-2">Minimum Investment</h3>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            In case of an eventuality, such as hospitalization or an accident, you file a claim with the insurer. Based on the policy terms, the insurer settles the claim by reimbursing the expenses or paying directly to the service provider (cashless).
+                                            PMS requires a minimum investment of ₹50 Lakhs as per SEBI regulations. AIFs have a higher threshold with Category I and II requiring ₹1 Crore minimum, while Category III requires ₹1 Crore with no upper limit.
                                         </p>
                                     </div>
                                 </div>
@@ -266,10 +265,10 @@ const GeneralInsurance = () => {
                                 viewport={{ once: true, margin: "-120px" }}
                                 className="text-center mb-12"
                             >
-                                <p className="section-title">Coverage</p>
-                                <h2 className="section-heading mb-4">Types of General Insurance</h2>
+                                <p className="section-title">Benefits</p>
+                                <h2 className="section-heading mb-4">Why Choose PMS & AIF?</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed">
-                                    We facilitate a variety of general insurance products to ensure comprehensive coverage for your needs.
+                                    Premium investment solutions that offer professional management and exclusive opportunities.
                                 </p>
                             </motion.div>
 
@@ -312,15 +311,15 @@ const GeneralInsurance = () => {
                             >
                                 <div className="flex flex-col md:flex-row items-start gap-6">
                                     <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                                        <Shield className="w-8 h-8" />
+                                        <Gem className="w-8 h-8" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-semibold text-foreground mb-3">Secure Your World</h3>
+                                        <h3 className="text-2xl font-semibold text-foreground mb-3">Exclusive Wealth Management</h3>
                                         <p className="text-muted-foreground leading-relaxed mb-4">
-                                            From your health to your car and home, your assets are valuable. Protecting them against risks like accidents, theft, fire, and illness is crucial for maintaining your financial stability.
+                                            PMS and AIF products are designed for investors who seek more than what traditional mutual funds offer. With higher investment thresholds come greater flexibility, personalization, and access to sophisticated investment strategies.
                                         </p>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            General insurance ensures that a sudden loss doesn't derail your financial plans, providing you with the necessary support to recover and rebuild.
+                                            Whether you're looking to maximize returns through concentrated equity portfolios, access pre-IPO opportunities, or diversify into alternative assets, our facilitation services connect you with top-rated fund managers.
                                         </p>
                                     </div>
                                 </div>
@@ -339,10 +338,10 @@ const GeneralInsurance = () => {
                                 className="glass-card bg-white/80 border border-white/40 shadow-[var(--shadow-lg)] p-10 rounded-3xl"
                             >
                                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                                    Get Comprehensive Protection
+                                    Explore Premium Investments
                                 </h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                                    Don't leave your assets explicitly exposed to risk. Contact us to find the right general insurance coverage for you and your family.
+                                    Ready to take your investments to the next level? Contact us to learn more about PMS and AIF opportunities suited to your wealth goals.
                                 </p>
                                 <div className="flex flex-wrap gap-4 justify-center">
                                     <Button
@@ -363,7 +362,7 @@ const GeneralInsurance = () => {
                                     </Button>
                                 </div>
                                 <p className="text-xs text-muted-foreground mt-6 leading-relaxed">
-                                    Disclaimer: Insurance is a subject matter of solicitation. Please read the policy document carefully before concluding a sale. SATS FINSERV Pvt Ltd acts as a facilitator for insurance products and does not guarantee claims settlement, which is the sole discretion of the insurer.
+                                    Disclaimer: PMS and AIF are subject to market risks. Past performance is not indicative of future results. Please read all scheme-related documents carefully before investing. SATS FINSERV Pvt Ltd acts as a facilitator and does not guarantee returns.
                                 </p>
                             </motion.div>
                         </div>
@@ -376,4 +375,4 @@ const GeneralInsurance = () => {
     );
 };
 
-export default GeneralInsurance;
+export default PMSAIF;

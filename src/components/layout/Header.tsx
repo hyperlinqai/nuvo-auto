@@ -72,6 +72,13 @@ const Header = ({ solid = false, topBar }: HeaderProps) => {
               className="flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={(e) => {
+                // If already on home page, prevent navigation and just scroll to top
+                if (window.location.pathname === "/" || window.location.pathname === "") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
             >
               <img
                 src={logo}
@@ -153,6 +160,24 @@ const Header = ({ solid = false, topBar }: HeaderProps) => {
                       className="block px-5 py-3 text-sm font-medium text-slate-600 hover:text-primary hover:bg-slate-50/80 transition-all duration-200 hover:translate-x-1"
                     >
                       General Insurance
+                    </a>
+                    <a
+                      href="/products/pms-aif"
+                      className="block px-5 py-3 text-sm font-medium text-slate-600 hover:text-primary hover:bg-slate-50/80 transition-all duration-200 hover:translate-x-1"
+                    >
+                      PMS / AIF
+                    </a>
+                    <a
+                      href="/products/health-insurance"
+                      className="block px-5 py-3 text-sm font-medium text-slate-600 hover:text-primary hover:bg-slate-50/80 transition-all duration-200 hover:translate-x-1"
+                    >
+                      Health Insurance
+                    </a>
+                    <a
+                      href="/products/corporate-fixed-deposits"
+                      className="block px-5 py-3 text-sm font-medium text-slate-600 hover:text-primary hover:bg-slate-50/80 transition-all duration-200 hover:translate-x-1"
+                    >
+                      Corporate Fixed Deposits
                     </a>
                   </div>
                 </div>
@@ -380,6 +405,36 @@ const Header = ({ solid = false, topBar }: HeaderProps) => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     General Insurance
+                  </motion.a>
+                  <motion.a
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.22 }}
+                    href="/products/pms-aif"
+                    className="block w-full text-left py-3 px-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors font-semibold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    PMS / AIF
+                  </motion.a>
+                  <motion.a
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.24 }}
+                    href="/products/health-insurance"
+                    className="block w-full text-left py-3 px-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors font-semibold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Health Insurance
+                  </motion.a>
+                  <motion.a
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.26 }}
+                    href="/products/corporate-fixed-deposits"
+                    className="block w-full text-left py-3 px-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors font-semibold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Corporate Fixed Deposits
                   </motion.a>
                   {/* Services Section */}
                   <div className="px-4 pt-2">

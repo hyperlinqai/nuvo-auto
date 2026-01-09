@@ -54,7 +54,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container-narrow section-padding pt-28 md:pt-32 relative z-10 w-full">
+      <div className="container-narrow hero-section-padding relative z-10 w-full">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           variants={containerVariants}

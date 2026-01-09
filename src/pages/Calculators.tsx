@@ -61,7 +61,7 @@ const Calculators = () => {
             <div className="min-h-screen flex flex-col bg-slate-50">
                 <Header solid />
 
-                <main className="flex-1 pt-24 pb-20 md:pt-32 md:pb-28">
+                <main className="flex-1 pt-36 pb-16 md:pt-40 md:pb-24">
                     {/* Hero Section for Calculators */}
                     <section className="mb-16 container-narrow px-4 text-center">
                         <motion.div

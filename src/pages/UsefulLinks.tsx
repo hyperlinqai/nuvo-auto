@@ -62,6 +62,8 @@ const resourceCategories = [
             { name: "Central KYC Registry (CKYCR)", url: "https://www.ckycindia.in" },
             { name: "CAMS KRA", url: "https://www.camskra.com" },
             { name: "KFintech KRA", url: "https://www.kfintech.com" },
+            { name: "Check PAN Card Status", url: "https://tin.tin.proteantech.in/pantan/StatusTrack.html" },
+            { name: "Check Aadhaar Card Status", url: "https://myaadhaar.uidai.gov.in/CheckAadhaar" },
         ]
     }
 ];
@@ -82,9 +84,9 @@ const UsefulLinks = () => {
 
                 <main className="flex-1">
                     {/* Hero Section */}
-                    <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
+                    <section className="relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/70" />
-                        <div className="container-narrow px-4 relative z-10 text-center text-white">
+                        <div className="container-narrow hero-section-padding relative z-10 text-center text-white">
                             <motion.div
                                 variants={fadeUp}
                                 initial="hidden"

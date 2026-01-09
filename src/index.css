@@ -121,7 +121,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
@@ -129,6 +134,11 @@
 @layer components {
   .section-padding {
     @apply px-4 py-20 md:px-8 md:py-28 lg:px-16;
+  }
+
+  /* Hero section padding - accounts for fixed header */
+  .hero-section-padding {
+    @apply pt-36 pb-16 md:pt-40 md:pb-24 px-4 md:px-8 lg:px-16;
   }
 
   .container-narrow {

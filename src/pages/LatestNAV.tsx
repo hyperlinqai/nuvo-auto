@@ -19,7 +19,7 @@ const LatestNAV = () => {
                 <Header solid />
                 <main className="flex-1">
                     {/* Header Section */}
-                    <section className="bg-muted/30 pt-32 pb-16 md:pt-40 md:pb-20 border-b border-border/40">
+                    <section className="bg-muted/30 pt-36 pb-16 md:pt-40 md:pb-24 border-b border-border/40">
                         <div className="container-narrow px-4 text-center">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}

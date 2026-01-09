@@ -11,7 +11,7 @@ const Disclaimer = () => {
             </Helmet>
             <div className="min-h-screen flex flex-col bg-background">
                 <Header solid />
-                <main className="flex-1 pt-32 pb-20 md:pt-40 md:pb-28">
+                <main className="flex-1 pt-36 pb-16 md:pt-40 md:pb-24">
                     <div className="container-narrow px-4">
                         <h1 className="text-3xl md:text-4xl font-bold mb-8">Disclaimer</h1>
                         <div className="prose prose-gray max-w-none space-y-6 text-muted-foreground">

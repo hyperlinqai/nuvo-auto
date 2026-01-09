@@ -83,9 +83,9 @@ const Feedback = () => {
 
                 <main className="flex-1">
                     {/* Hero Section */}
-                    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+                    <section className="relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-secondary/80" />
-                        <div className="container-narrow px-4 relative z-10 text-center text-white">
+                        <div className="container-narrow hero-section-padding relative z-10 text-center text-white">
                             <motion.div
                                 variants={fadeUp}
                                 initial="hidden"

@@ -1,49 +1,56 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
 import {
   TrendingUp,
-  Building2,
-  PiggyBank,
-  Users,
-  Heart,
   Shield,
-  Coins,
+  Car,
+  BarChart3,
+  HeartPulse,
+  Building2,
   FileSpreadsheet,
   GraduationCap,
   Calendar,
   Sparkles,
+  ArrowRight,
 } from "lucide-react";
 
 const products = [
   {
     icon: TrendingUp,
     title: "Mutual Funds",
-    description: "Access to various mutual fund categories including equity, debt, hybrid, and solution oriented schemes. Detailed information available under 'About Mutual Fund' section.",
-  },
-  {
-    icon: Building2,
-    title: "Bonds",
-    description: "Corporate and government bonds with defined tenure and interest structure, including options with half yearly payout and long term tenure.",
-  },
-  {
-    icon: PiggyBank,
-    title: "Fixed Deposits",
-    description: "Fixed deposit options offering assured returns, premature encashment facilities, and access across multiple institutions.",
-  },
-  {
-    icon: Users,
-    title: "New Pension Scheme (NPS)",
-    description: "Pension oriented long term savings product regulated by PFRDA, designed for retirement savings and long term wealth accumulation.",
+    description: "Access to various mutual fund categories including equity, debt, hybrid, and solution oriented schemes for wealth creation.",
+    link: "/products/mutual-funds",
   },
   {
     icon: Shield,
-    title: "Insurance (Life & Health)",
-    description: "Insurance products focused on financial protection, long term security, and health coverage including hospitalization support.",
+    title: "Life Insurance",
+    description: "Comprehensive life insurance solutions for financial protection and long-term security of your loved ones.",
+    link: "/products/life-insurance",
   },
   {
-    icon: Coins,
-    title: "Sovereign Gold Bonds (SGBs)",
-    description: "Government issued gold linked securities as an alternative to holding physical gold, providing gold exposure with additional benefits.",
+    icon: Car,
+    title: "General Insurance",
+    description: "Protection for your assets including motor, home, and travel insurance with comprehensive coverage options.",
+    link: "/products/general-insurance",
+  },
+  {
+    icon: BarChart3,
+    title: "PMS / AIF",
+    description: "Portfolio Management Services and Alternative Investment Funds for sophisticated investors seeking higher returns.",
+    link: "/products/pms-aif",
+  },
+  {
+    icon: HeartPulse,
+    title: "Health Insurance",
+    description: "Comprehensive health coverage including hospitalization, critical illness, and family floater plans.",
+    link: "/products/health-insurance",
+  },
+  {
+    icon: Building2,
+    title: "Corporate Fixed Deposits",
+    description: "Fixed deposit options from reputed corporates offering higher interest rates with flexible tenure options.",
+    link: "/products/corporate-fixed-deposits",
   },
 ];
 
@@ -134,26 +141,30 @@ const OfferingsSection = () => {
               {products.map((product) => {
                 const Icon = product.icon;
                 return (
-                  <motion.div
-                    key={product.title}
-                    variants={cardVariants}
-                    whileHover={{ y: -6, scale: 1.01 }}
-                    className="group bg-card rounded-2xl p-7 shadow-[var(--shadow-md)] border border-border/60 hover:border-primary/30 hover:shadow-[var(--shadow-xl)] transition-all duration-300"
-                  >
-                    <div className="flex flex-col gap-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/12 to-secondary/12 flex items-center justify-center text-primary shadow-[var(--shadow-sm)] group-hover:scale-105 transition-transform duration-300">
-                          <Icon className="w-5 h-5" />
+                  <Link key={product.title} to={product.link}>
+                    <motion.div
+                      variants={cardVariants}
+                      whileHover={{ y: -6, scale: 1.01 }}
+                      className="group bg-card rounded-2xl p-7 shadow-[var(--shadow-md)] border border-border/60 hover:border-primary/30 hover:shadow-[var(--shadow-xl)] transition-all duration-300 h-full"
+                    >
+                      <div className="flex flex-col gap-4 h-full">
+                        <div className="flex items-center gap-3">
+                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/12 to-secondary/12 flex items-center justify-center text-primary shadow-[var(--shadow-sm)] group-hover:scale-105 transition-transform duration-300">
+                            <Icon className="w-5 h-5" />
+                          </div>
+                          <h4 className="font-semibold text-xl text-foreground leading-tight">
+                            {product.title}
+                          </h4>
                         </div>
-                        <h4 className="font-semibold text-xl text-foreground leading-tight">
-                          {product.title}
-                        </h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm flex-grow">
+                          {product.description}
+                        </p>
+                        <div className="flex items-center gap-1 text-primary font-medium text-sm group-hover:gap-2 transition-all">
+                          Learn More <ArrowRight className="w-4 h-4" />
+                        </div>
                       </div>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
-                        {product.description}
-                      </p>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 );
               })}
             </motion.div>

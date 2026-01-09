@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   ShieldCheck,
   FileSpreadsheet,
@@ -104,7 +105,7 @@ const TaxSavingSupport = () => {
                 }}
               />
             </div>
-            <div className="container-narrow section-padding relative z-10">
+            <div className="container-narrow hero-section-padding relative z-10">
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -294,17 +295,17 @@ const TaxSavingSupport = () => {
                     variant="default"
                     size="lg"
                     className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-7 h-12 font-semibold"
-                    onClick={() => document.getElementById("enquiry")?.scrollIntoView({ behavior: "smooth" })}
+                    asChild
                   >
-                    Quick Enquiry
+                    <Link to="/contact">Quick Enquiry</Link>
                   </Button>
                   <Button
                     variant="outline"
                     size="lg"
                     className="border-primary text-primary hover:bg-primary/10 px-7 h-12 font-semibold"
-                    onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+                    asChild
                   >
-                    Back to Home
+                    <Link to="/">Back to Home</Link>
                   </Button>
                 </div>
                 <p className="text-xs text-muted-foreground mt-6 leading-relaxed">

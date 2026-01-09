@@ -4,16 +4,15 @@ import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
+    Landmark,
+    TrendingUp,
     Shield,
-    HeartPulse,
-    Car,
-    Home,
-    Briefcase,
-    Plane,
+    Clock,
     CheckCircle2,
-    Coins,
-    ArrowRightLeft,
-    Umbrella,
+    Percent,
+    Calendar,
+    Building2,
+    AlertTriangle,
 } from "lucide-react";
 
 const fadeUp = {
@@ -34,65 +33,65 @@ const stagger = {
 
 const howItWorks = [
     {
-        icon: Shield,
-        title: "Assess Risk",
-        desc: "Identify the assets or liabilities you need to protect, whether it's your health, vehicle, home, or business.",
+        icon: Building2,
+        title: "Choose Company",
+        desc: "Select from reputed companies with strong credit ratings (AAA, AA+, AA) from agencies like CRISIL, ICRA, or CARE.",
     },
     {
-        icon: Umbrella,
-        title: "Choose Cover",
-        desc: "Select a general insurance plan that provides adequate coverage for potential risks and damages.",
+        icon: Calendar,
+        title: "Select Tenure",
+        desc: "Pick a tenure that matches your investment horizon – from 1 year to 5 years or more based on the company's offerings.",
     },
     {
-        icon: CheckCircle2,
-        title: "Stay Protected",
-        desc: "Pay premiums to safeguard against financial losses arising from unforeseen events like accidents, illness, or theft.",
+        icon: Percent,
+        title: "Earn Interest",
+        desc: "Receive interest payouts monthly, quarterly, annually, or at maturity as per your choice and the scheme selected.",
     },
 ];
 
 const advantages = [
     {
-        icon: HeartPulse,
-        title: "Health Protection",
-        desc: "Health insurance covers medical expenses, ensuring you receive quality healthcare without depleting your savings.",
+        icon: TrendingUp,
+        title: "Higher Returns",
+        desc: "Corporate FDs typically offer 0.5% to 2% higher interest rates compared to traditional bank fixed deposits.",
     },
     {
-        icon: Car,
-        title: "Motor Insurance",
-        desc: "Mandatory by law, it protects against liability and damages to your vehicle, as well as third-party liabilities.",
+        icon: Shield,
+        title: "Rated by Agencies",
+        desc: "Credit rating agencies assess the company's ability to repay, helping you make informed investment decisions.",
     },
     {
-        icon: Home,
-        title: "Home Insurance",
-        desc: "Safeguards your home and its contents against risks like fire, theft, and natural calamities.",
+        icon: Clock,
+        title: "Flexible Tenures",
+        desc: "Choose from various tenure options ranging from 12 months to 60 months based on your financial goals.",
     },
     {
-        icon: Plane,
-        title: "Travel Insurance",
-        desc: "Covers trip cancellations, medical emergencies, and lost luggage while you are traveling domestically or abroad.",
+        icon: Landmark,
+        title: "Regular Income",
+        desc: "Opt for periodic interest payouts (monthly/quarterly/annually) for regular income needs.",
     },
     {
-        icon: Briefcase,
-        title: "Business Protection",
-        desc: "Protects businesses against operational risks, including property damage, liability claims, and employee-related risks.",
+        icon: Calendar,
+        title: "Cumulative Option",
+        desc: "Choose cumulative FDs for wealth creation where interest is compounded and paid at maturity.",
     },
 ];
 
 const keyPoints = [
-    "General insurance contracts are typically for a shorter duration, usually one year, renewable annually.",
-    "It provides financial protection against loss or damage to your assets.",
-    "Covers a wide range of needs including Health, Motor, Travel, and Home insurance.",
-    "We help facilitate the purchase of policies that best fit your specific protection needs.",
+    "Corporate FDs are issued by Non-Banking Financial Companies (NBFCs) and other corporates to raise funds from the public.",
+    "They offer higher interest rates than bank FDs but carry slightly higher risk as they are not insured by DICGC.",
+    "Credit ratings (AAA, AA+, AA) indicate the company's creditworthiness – higher ratings mean lower default risk.",
+    "Senior citizens often get an additional 0.25% to 0.50% interest rate benefit on corporate fixed deposits.",
 ];
 
-const GeneralInsurance = () => {
+const CorporateFixedDeposits = () => {
     return (
         <>
             <Helmet>
-                <title>General Insurance | SATS FINSERV</title>
+                <title>Corporate Fixed Deposits | SATS FINSERV</title>
                 <meta
                     name="description"
-                    content="Explore General Insurance solutions including Health, Motor, and Home insurance with SATS FINSERV. Protect your assets and health with our compliant facilitation."
+                    content="Invest in Corporate Fixed Deposits for higher returns with SATS FINSERV. Choose from AAA-rated company FDs with flexible tenures and attractive interest rates."
                 />
             </Helmet>
 
@@ -122,10 +121,10 @@ const GeneralInsurance = () => {
                             >
                                 <p className="section-title text-white/80">Product</p>
                                 <h1 className="section-heading text-white mb-6">
-                                    General Insurance
+                                    Corporate Fixed Deposits
                                 </h1>
                                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                                    General insurance covers non-life assets such as your home, vehicle, and health, providing financial protection against unforeseen liabilities and damages.
+                                    Earn higher interest rates on your savings with fixed deposits from reputed corporates and NBFCs, backed by strong credit ratings.
                                 </p>
                                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                                     <Button
@@ -134,7 +133,7 @@ const GeneralInsurance = () => {
                                         className="bg-white text-primary hover:bg-white/90 px-7 h-12 font-semibold"
                                         onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
                                     >
-                                        Get Protected
+                                        Start Investing
                                     </Button>
                                     <Button
                                         variant="outline"
@@ -149,7 +148,7 @@ const GeneralInsurance = () => {
                         </div>
                     </section>
 
-                    {/* What is General Insurance */}
+                    {/* What are Corporate FDs */}
                     <section className="section-padding bg-background">
                         <div className="container-narrow max-w-5xl">
                             <motion.div
@@ -160,9 +159,9 @@ const GeneralInsurance = () => {
                                 className="text-center mb-12"
                             >
                                 <p className="section-title">Overview</p>
-                                <h2 className="section-heading mb-4">What is General Insurance?</h2>
+                                <h2 className="section-heading mb-4">What are Corporate FDs?</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                                    General Insurance refers to any insurance that is not determined to be life insurance. It basically comprises of insurance of property against fire, burglary, etc., personal insurance such as Accident and Health Insurance, and liability insurance covering legal liabilities.
+                                    Corporate Fixed Deposits are term deposits offered by companies and NBFCs to raise capital. They function similarly to bank FDs but typically offer higher interest rates to attract investors.
                                 </p>
                             </motion.div>
 
@@ -202,7 +201,7 @@ const GeneralInsurance = () => {
                                 <p className="section-title">Process</p>
                                 <h2 className="section-heading mb-4">How It Works</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                                    By paying a premium, you transfer the risk of financial loss to the insurance company. In the event of a covered loss, the insurer compensates you, helping you recover financially.
+                                    Investing in corporate FDs is straightforward. Select a well-rated company, choose your tenure, and start earning attractive returns on your investment.
                                 </p>
                             </motion.div>
 
@@ -242,13 +241,13 @@ const GeneralInsurance = () => {
                                 className="mt-10 bg-card rounded-2xl p-6 border border-border/60 shadow-[var(--shadow-md)]"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="w-11 h-11 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
-                                        <ArrowRightLeft className="w-5 h-5" />
+                                    <div className="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center flex-shrink-0">
+                                        <AlertTriangle className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-foreground mb-2">Claim Settlement</h3>
+                                        <h3 className="text-lg font-semibold text-foreground mb-2">Risk Consideration</h3>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            In case of an eventuality, such as hospitalization or an accident, you file a claim with the insurer. Based on the policy terms, the insurer settles the claim by reimbursing the expenses or paying directly to the service provider (cashless).
+                                            Unlike bank FDs which are insured up to ₹5 Lakhs by DICGC, corporate FDs are not insured. Always check the credit rating and invest only in highly-rated (AAA, AA+) companies to minimize risk.
                                         </p>
                                     </div>
                                 </div>
@@ -266,10 +265,10 @@ const GeneralInsurance = () => {
                                 viewport={{ once: true, margin: "-120px" }}
                                 className="text-center mb-12"
                             >
-                                <p className="section-title">Coverage</p>
-                                <h2 className="section-heading mb-4">Types of General Insurance</h2>
+                                <p className="section-title">Benefits</p>
+                                <h2 className="section-heading mb-4">Why Choose Corporate FDs?</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed">
-                                    We facilitate a variety of general insurance products to ensure comprehensive coverage for your needs.
+                                    Corporate fixed deposits offer several advantages for conservative investors seeking better returns.
                                 </p>
                             </motion.div>
 
@@ -312,15 +311,15 @@ const GeneralInsurance = () => {
                             >
                                 <div className="flex flex-col md:flex-row items-start gap-6">
                                     <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                                        <Shield className="w-8 h-8" />
+                                        <Landmark className="w-8 h-8" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-semibold text-foreground mb-3">Secure Your World</h3>
+                                        <h3 className="text-2xl font-semibold text-foreground mb-3">Maximize Your Fixed Income Returns</h3>
                                         <p className="text-muted-foreground leading-relaxed mb-4">
-                                            From your health to your car and home, your assets are valuable. Protecting them against risks like accidents, theft, fire, and illness is crucial for maintaining your financial stability.
+                                            While bank FDs offer safety, corporate FDs from highly-rated companies provide an opportunity to earn higher returns without significantly increasing risk. A diversified approach across multiple corporate FDs can enhance your fixed income portfolio.
                                         </p>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            General insurance ensures that a sudden loss doesn't derail your financial plans, providing you with the necessary support to recover and rebuild.
+                                            We facilitate investments in FDs from leading NBFCs and corporates with AAA and AA+ ratings, ensuring you get the best of both safety and returns.
                                         </p>
                                     </div>
                                 </div>
@@ -339,10 +338,10 @@ const GeneralInsurance = () => {
                                 className="glass-card bg-white/80 border border-white/40 shadow-[var(--shadow-lg)] p-10 rounded-3xl"
                             >
                                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                                    Get Comprehensive Protection
+                                    Start Earning Higher Returns
                                 </h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                                    Don't leave your assets explicitly exposed to risk. Contact us to find the right general insurance coverage for you and your family.
+                                    Explore corporate FD options from top-rated companies and NBFCs. Contact us to find the best rates and tenures for your investment goals.
                                 </p>
                                 <div className="flex flex-wrap gap-4 justify-center">
                                     <Button
@@ -363,7 +362,7 @@ const GeneralInsurance = () => {
                                     </Button>
                                 </div>
                                 <p className="text-xs text-muted-foreground mt-6 leading-relaxed">
-                                    Disclaimer: Insurance is a subject matter of solicitation. Please read the policy document carefully before concluding a sale. SATS FINSERV Pvt Ltd acts as a facilitator for insurance products and does not guarantee claims settlement, which is the sole discretion of the insurer.
+                                    Disclaimer: Investments in corporate FDs are not insured and are subject to credit risk. Past performance is not indicative of future results. Please verify the credit rating and terms before investing. SATS FINSERV Pvt Ltd acts as a facilitator and does not guarantee returns or principal safety.
                                 </p>
                             </motion.div>
                         </div>
@@ -376,4 +375,4 @@ const GeneralInsurance = () => {
     );
 };
 
-export default GeneralInsurance;
+export default CorporateFixedDeposits;

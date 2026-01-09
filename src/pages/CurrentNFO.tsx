@@ -25,16 +25,65 @@ const CurrentNFO = () => {
     useEffect(() => {
         const fetchNFOs = async () => {
             try {
-                const proxyUrl = "https://api.allorigins.win/get?url=";
-                const targetUrl = encodeURIComponent("https://portal.amfiindia.com/rssNAV.aspx?nfo=y");
+                const targetUrl = "https://portal.amfiindia.com/rssNAV.aspx?nfo=y";
 
-                const response = await fetch(`${proxyUrl}${targetUrl}`);
-                const data = await response.json();
+                // Try multiple CORS proxies with fallback
+                const corsProxies = [
+                    {
+                        url: `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
+                        type: 'raw'
+                    },
+                    {
+                        url: `https://thingproxy.freeboard.io/fetch/${targetUrl}`,
+                        type: 'raw'
+                    },
+                    {
+                        url: `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`,
+                        type: 'json'
+                    },
+                ];
 
-                if (!data.contents) throw new Error("No content received");
+                let xmlContent = null;
+                let lastError = null;
+
+                for (const proxy of corsProxies) {
+                    try {
+                        const response = await fetch(proxy.url, {
+                            headers: {
+                                'Accept': 'application/xml, text/xml, */*'
+                            }
+                        });
+
+                        if (!response.ok) {
+                            console.log(`Proxy ${proxy.url} returned ${response.status}`);
+                            continue;
+                        }
+
+                        if (proxy.type === 'raw') {
+                            xmlContent = await response.text();
+                        } else {
+                            const result = await response.json();
+                            xmlContent = result.contents;
+                        }
+
+                        if (xmlContent && xmlContent.includes('<rss')) {
+                            console.log(`Successfully fetched from ${proxy.url}`);
+                            break;
+                        }
+                        xmlContent = null;
+                    } catch (proxyError) {
+                        console.log(`Proxy ${proxy.url} failed:`, proxyError);
+                        lastError = proxyError;
+                        continue;
+                    }
+                }
+
+                if (!xmlContent) {
+                    throw lastError || new Error("All proxies failed");
+                }
 
                 const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+                const xmlDoc = parser.parseFromString(xmlContent, "text/xml");
                 const items = xmlDoc.querySelectorAll("item");
 
                 const parsedItems: NFOItem[] = [];
@@ -95,7 +144,7 @@ const CurrentNFO = () => {
             <div className="min-h-screen flex flex-col bg-slate-50">
                 <Header solid />
 
-                <main className="flex-1 pt-24 pb-20 md:pt-32 md:pb-28">
+                <main className="flex-1 pt-36 pb-16 md:pt-40 md:pb-24">
                     <div className="container-narrow px-4">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

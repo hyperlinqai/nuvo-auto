@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Target,
   TrendingUp,
@@ -113,7 +114,7 @@ const RetirementSaving = () => {
                 }}
               />
             </div>
-            <div className="container-narrow section-padding relative z-10">
+            <div className="container-narrow hero-section-padding relative z-10">
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -345,7 +346,7 @@ const RetirementSaving = () => {
                     className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-7 h-12 font-semibold"
                     asChild
                   >
-                    <a href="/#enquiry">Quick Enquiry</a>
+                    <Link to="/contact">Quick Enquiry</Link>
                   </Button>
                   <Button
                     variant="outline"
@@ -353,7 +354,7 @@ const RetirementSaving = () => {
                     className="border-primary text-primary hover:bg-primary/10 px-7 h-12 font-semibold"
                     asChild
                   >
-                    <a href="/">Back to Home</a>
+                    <Link to="/">Back to Home</Link>
                   </Button>
                 </div>
                 <p className="text-xs text-muted-foreground mt-6 leading-relaxed">

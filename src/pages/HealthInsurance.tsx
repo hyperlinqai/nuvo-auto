@@ -4,16 +4,15 @@ import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-    Shield,
     HeartPulse,
-    Car,
-    Home,
-    Briefcase,
-    Plane,
+    Shield,
+    Users,
+    Hospital,
+    Stethoscope,
     CheckCircle2,
-    Coins,
-    ArrowRightLeft,
-    Umbrella,
+    Wallet,
+    FileCheck,
+    Ambulance,
 } from "lucide-react";
 
 const fadeUp = {
@@ -34,65 +33,65 @@ const stagger = {
 
 const howItWorks = [
     {
-        icon: Shield,
-        title: "Assess Risk",
-        desc: "Identify the assets or liabilities you need to protect, whether it's your health, vehicle, home, or business.",
+        icon: FileCheck,
+        title: "Choose Coverage",
+        desc: "Select a health insurance plan based on your medical needs, family size, and budget. Compare sum insured, network hospitals, and features.",
     },
     {
-        icon: Umbrella,
-        title: "Choose Cover",
-        desc: "Select a general insurance plan that provides adequate coverage for potential risks and damages.",
+        icon: Wallet,
+        title: "Pay Premium",
+        desc: "Pay annual premiums to keep your policy active. Premiums depend on age, sum insured, and coverage type.",
     },
     {
-        icon: CheckCircle2,
-        title: "Stay Protected",
-        desc: "Pay premiums to safeguard against financial losses arising from unforeseen events like accidents, illness, or theft.",
+        icon: Hospital,
+        title: "Claim Benefits",
+        desc: "In case of hospitalization, avail cashless treatment at network hospitals or claim reimbursement for medical expenses.",
     },
 ];
 
-const advantages = [
+const coverageTypes = [
+    {
+        icon: Users,
+        title: "Family Floater",
+        desc: "Single policy covering your entire family – spouse, children, and parents – under one sum insured.",
+    },
     {
         icon: HeartPulse,
-        title: "Health Protection",
-        desc: "Health insurance covers medical expenses, ensuring you receive quality healthcare without depleting your savings.",
+        title: "Critical Illness",
+        desc: "Lump sum payout on diagnosis of specified critical illnesses like cancer, heart attack, or stroke.",
     },
     {
-        icon: Car,
-        title: "Motor Insurance",
-        desc: "Mandatory by law, it protects against liability and damages to your vehicle, as well as third-party liabilities.",
+        icon: Stethoscope,
+        title: "Individual Health",
+        desc: "Personal health coverage with dedicated sum insured for comprehensive medical protection.",
     },
     {
-        icon: Home,
-        title: "Home Insurance",
-        desc: "Safeguards your home and its contents against risks like fire, theft, and natural calamities.",
+        icon: Ambulance,
+        title: "Accident Cover",
+        desc: "Coverage for accidental injuries, hospitalization, and disability arising from accidents.",
     },
     {
-        icon: Plane,
-        title: "Travel Insurance",
-        desc: "Covers trip cancellations, medical emergencies, and lost luggage while you are traveling domestically or abroad.",
-    },
-    {
-        icon: Briefcase,
-        title: "Business Protection",
-        desc: "Protects businesses against operational risks, including property damage, liability claims, and employee-related risks.",
+        icon: Hospital,
+        title: "Super Top-Up",
+        desc: "Additional coverage that kicks in after your base policy limit is exhausted, at affordable premiums.",
     },
 ];
 
 const keyPoints = [
-    "General insurance contracts are typically for a shorter duration, usually one year, renewable annually.",
-    "It provides financial protection against loss or damage to your assets.",
-    "Covers a wide range of needs including Health, Motor, Travel, and Home insurance.",
-    "We help facilitate the purchase of policies that best fit your specific protection needs.",
+    "Health insurance provides financial protection against medical expenses including hospitalization, surgeries, and treatments.",
+    "Pre and post hospitalization expenses are typically covered for 30-60 days before and 60-90 days after hospitalization.",
+    "Cashless treatment facility is available at network hospitals, eliminating out-of-pocket expenses during emergencies.",
+    "Tax benefits under Section 80D of the Income Tax Act for premiums paid towards health insurance.",
 ];
 
-const GeneralInsurance = () => {
+const HealthInsurance = () => {
     return (
         <>
             <Helmet>
-                <title>General Insurance | SATS FINSERV</title>
+                <title>Health Insurance | SATS FINSERV</title>
                 <meta
                     name="description"
-                    content="Explore General Insurance solutions including Health, Motor, and Home insurance with SATS FINSERV. Protect your assets and health with our compliant facilitation."
+                    content="Get comprehensive Health Insurance coverage with SATS FINSERV. Protect your family with cashless hospitalization, critical illness cover, and tax benefits."
                 />
             </Helmet>
 
@@ -122,10 +121,10 @@ const GeneralInsurance = () => {
                             >
                                 <p className="section-title text-white/80">Product</p>
                                 <h1 className="section-heading text-white mb-6">
-                                    General Insurance
+                                    Health Insurance
                                 </h1>
                                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                                    General insurance covers non-life assets such as your home, vehicle, and health, providing financial protection against unforeseen liabilities and damages.
+                                    Comprehensive health coverage that protects you and your family from the financial burden of medical expenses and ensures access to quality healthcare.
                                 </p>
                                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                                     <Button
@@ -134,7 +133,7 @@ const GeneralInsurance = () => {
                                         className="bg-white text-primary hover:bg-white/90 px-7 h-12 font-semibold"
                                         onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
                                     >
-                                        Get Protected
+                                        Get Covered
                                     </Button>
                                     <Button
                                         variant="outline"
@@ -149,7 +148,7 @@ const GeneralInsurance = () => {
                         </div>
                     </section>
 
-                    {/* What is General Insurance */}
+                    {/* What is Health Insurance */}
                     <section className="section-padding bg-background">
                         <div className="container-narrow max-w-5xl">
                             <motion.div
@@ -160,9 +159,9 @@ const GeneralInsurance = () => {
                                 className="text-center mb-12"
                             >
                                 <p className="section-title">Overview</p>
-                                <h2 className="section-heading mb-4">What is General Insurance?</h2>
+                                <h2 className="section-heading mb-4">Why Health Insurance?</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                                    General Insurance refers to any insurance that is not determined to be life insurance. It basically comprises of insurance of property against fire, burglary, etc., personal insurance such as Accident and Health Insurance, and liability insurance covering legal liabilities.
+                                    Medical costs in India are rising rapidly. A single hospitalization can cost lakhs of rupees, potentially depleting your savings. Health insurance ensures you receive the best medical care without financial stress.
                                 </p>
                             </motion.div>
 
@@ -202,7 +201,7 @@ const GeneralInsurance = () => {
                                 <p className="section-title">Process</p>
                                 <h2 className="section-heading mb-4">How It Works</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                                    By paying a premium, you transfer the risk of financial loss to the insurance company. In the event of a covered loss, the insurer compensates you, helping you recover financially.
+                                    Getting health insurance is simple. Select a plan that suits your needs, pay regular premiums, and enjoy peace of mind knowing your medical expenses are covered.
                                 </p>
                             </motion.div>
 
@@ -243,12 +242,12 @@ const GeneralInsurance = () => {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="w-11 h-11 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
-                                        <ArrowRightLeft className="w-5 h-5" />
+                                        <Hospital className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-foreground mb-2">Claim Settlement</h3>
+                                        <h3 className="text-lg font-semibold text-foreground mb-2">Cashless Hospitalization</h3>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            In case of an eventuality, such as hospitalization or an accident, you file a claim with the insurer. Based on the policy terms, the insurer settles the claim by reimbursing the expenses or paying directly to the service provider (cashless).
+                                            With cashless facility at network hospitals, you don't need to pay upfront for treatment. The insurance company settles bills directly with the hospital, so you can focus on recovery.
                                         </p>
                                     </div>
                                 </div>
@@ -256,7 +255,7 @@ const GeneralInsurance = () => {
                         </div>
                     </section>
 
-                    {/* Advantages */}
+                    {/* Coverage Types */}
                     <section className="section-padding bg-background">
                         <div className="container-narrow max-w-5xl">
                             <motion.div
@@ -267,9 +266,9 @@ const GeneralInsurance = () => {
                                 className="text-center mb-12"
                             >
                                 <p className="section-title">Coverage</p>
-                                <h2 className="section-heading mb-4">Types of General Insurance</h2>
+                                <h2 className="section-heading mb-4">Types of Health Insurance</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed">
-                                    We facilitate a variety of general insurance products to ensure comprehensive coverage for your needs.
+                                    Choose from a variety of health insurance products based on your specific needs.
                                 </p>
                             </motion.div>
 
@@ -280,7 +279,7 @@ const GeneralInsurance = () => {
                                 viewport={{ once: true, margin: "-120px" }}
                                 className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                             >
-                                {advantages.map((item) => {
+                                {coverageTypes.map((item) => {
                                     const Icon = item.icon;
                                     return (
                                         <motion.div
@@ -315,12 +314,12 @@ const GeneralInsurance = () => {
                                         <Shield className="w-8 h-8" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-semibold text-foreground mb-3">Secure Your World</h3>
+                                        <h3 className="text-2xl font-semibold text-foreground mb-3">Protect Your Health, Secure Your Future</h3>
                                         <p className="text-muted-foreground leading-relaxed mb-4">
-                                            From your health to your car and home, your assets are valuable. Protecting them against risks like accidents, theft, fire, and illness is crucial for maintaining your financial stability.
+                                            Health insurance is not just about covering medical bills – it's about ensuring you and your loved ones have access to the best healthcare without compromising your financial goals.
                                         </p>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            General insurance ensures that a sudden loss doesn't derail your financial plans, providing you with the necessary support to recover and rebuild.
+                                            With rising medical costs and new-age diseases, having comprehensive health coverage is no longer optional. Start young, stay covered, and enjoy peace of mind.
                                         </p>
                                     </div>
                                 </div>
@@ -339,10 +338,10 @@ const GeneralInsurance = () => {
                                 className="glass-card bg-white/80 border border-white/40 shadow-[var(--shadow-lg)] p-10 rounded-3xl"
                             >
                                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                                    Get Comprehensive Protection
+                                    Get Comprehensive Health Coverage
                                 </h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                                    Don't leave your assets explicitly exposed to risk. Contact us to find the right general insurance coverage for you and your family.
+                                    Don't wait for a medical emergency to realize the importance of health insurance. Contact us today to find the right plan for you and your family.
                                 </p>
                                 <div className="flex flex-wrap gap-4 justify-center">
                                     <Button
@@ -376,4 +375,4 @@ const GeneralInsurance = () => {
     );
 };
 
-export default GeneralInsurance;
+export default HealthInsurance;

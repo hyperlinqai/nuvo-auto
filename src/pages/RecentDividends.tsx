@@ -72,7 +72,7 @@ const RecentDividends = () => {
     };
 
     return (
-        <div className="pt-24 min-h-screen bg-slate-50">
+        <div className="pt-36 min-h-screen bg-slate-50">
             <Helmet>
                 <title>Recent Dividends | SATS Finserv</title>
                 <meta name="description" content="Stay updated with the latest dividend announcements and corporate actions from Indian stock markets." />

@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import CompanyProfile from "./pages/CompanyProfile";
 import TaxSavingSupport from "./pages/TaxSavingSupport";
@@ -12,6 +13,9 @@ import RetirementSaving from "./pages/RetirementSaving";
 import LifeInsurance from "./pages/LifeInsurance";
 import MutualFunds from "./pages/MutualFunds";
 import GeneralInsurance from "./pages/GeneralInsurance";
+import PMSAIF from "./pages/PMSAIF";
+import HealthInsurance from "./pages/HealthInsurance";
+import CorporateFixedDeposits from "./pages/CorporateFixedDeposits";
 import KnowledgeCentre from "./pages/KnowledgeCentre";
 import NriCorner from "./pages/NriCorner";
 import AdvisorCorner from "./pages/AdvisorCorner";
@@ -50,6 +54,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
+        <ScrollToTop />
         <HelmetProvider>
           <WhatsAppButton />
           <Routes>
@@ -59,6 +64,9 @@ const App = () => (
             <Route path="/products/mutual-funds" element={<MutualFunds />} />
             <Route path="/products/life-insurance" element={<LifeInsurance />} />
             <Route path="/products/general-insurance" element={<GeneralInsurance />} />
+            <Route path="/products/pms-aif" element={<PMSAIF />} />
+            <Route path="/products/health-insurance" element={<HealthInsurance />} />
+            <Route path="/products/corporate-fixed-deposits" element={<CorporateFixedDeposits />} />
             <Route path="/services/tax-saving-support" element={<TaxSavingSupport />} />
             <Route path="/services/child-future-saving" element={<ChildFutureSaving />} />
             <Route path="/services/retirement-saving" element={<RetirementSaving />} />

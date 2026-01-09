@@ -37,7 +37,7 @@ const CalculatorLayout = ({
             <div className="min-h-screen flex flex-col bg-slate-50">
                 <Header solid />
 
-                <main className="flex-1 pt-24 pb-20 md:pt-32 md:pb-28">
+                <main className="flex-1 pt-36 pb-20 md:pt-40 md:pb-28">
                     <div className="container-narrow px-4">
                         {/* Breadcrumb / Back */}
                         <div className="mb-6">

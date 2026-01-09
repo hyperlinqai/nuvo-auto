@@ -113,7 +113,7 @@ const MutualFunds = () => {
                 }}
               />
             </div>
-            <div className="container-narrow section-padding relative z-10">
+            <div className="container-narrow hero-section-padding relative z-10">
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
