@@ -87,8 +87,8 @@ const AboutSection = () => {
             A Legacy of Trust & <span className="text-gradient">Reliability</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
-            SATS FINSERV Pvt Ltd is an AMFI registered Mutual Fund Distributor committed to 
-            supporting investors through structured processes, transparent operations, 
+            SATS FINSERV Pvt Ltd is an AMFI registered Mutual Fund Distributor committed to
+            supporting investors through structured processes, transparent operations,
             and long term professional relationships.
           </p>
         </motion.div>
@@ -111,14 +111,14 @@ const AboutSection = () => {
           />
           <StatCard
             icon={<Award className="w-8 h-8" />}
-            number="10+"
+            number="50"
             label="Certifications"
             delay={0.3}
             isInView={isInView}
           />
           <StatCard
             icon={<Users className="w-8 h-8" />}
-            number="200+"
+            number="8000+"
             label="Happy Clients"
             delay={0.4}
             isInView={isInView}
@@ -134,8 +134,8 @@ const AboutSection = () => {
           className="mt-20 text-center"
         >
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
-            Our approach emphasizes continuity, trust, and long term client relationships. 
-            We focus on delivering consistent service quality while maintaining complete 
+            Our approach emphasizes continuity, trust, and long term client relationships.
+            We focus on delivering consistent service quality while maintaining complete
             transparency in all our interactions and documentation processes.
           </p>
         </motion.div>
