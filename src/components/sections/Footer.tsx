@@ -140,6 +140,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="/media" className="text-slate-400 hover:text-primary transition-colors text-sm font-medium inline-block">
+                    Media
+                  </a>
+                </li>
+                <li>
                   <a href="/latest-nav" className="text-slate-400 hover:text-primary transition-colors text-sm font-medium inline-block">
                     Check Latest NAV
                   </a>

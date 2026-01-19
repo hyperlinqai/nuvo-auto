@@ -270,6 +270,12 @@ const Header = ({ solid = false, topBar }: HeaderProps) => {
                       Useful Links
                     </a>
                     <a
+                      href="/media"
+                      className="block px-5 py-2 text-sm font-medium text-slate-600 hover:text-primary hover:bg-slate-50/80 transition-all duration-200 hover:translate-x-1"
+                    >
+                      Media
+                    </a>
+                    <a
                       href="/latest-nav"
                       className="block px-5 py-2 text-sm font-medium text-slate-600 hover:text-primary hover:bg-slate-50/80 transition-all duration-200 hover:translate-x-1"
                     >
@@ -513,6 +519,16 @@ const Header = ({ solid = false, topBar }: HeaderProps) => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Useful Links
+                  </motion.a>
+                  <motion.a
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.34 }}
+                    href="/media"
+                    className="block w-full text-left py-3 px-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors font-semibold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Media
                   </motion.a>
                   <motion.a
                     initial={{ x: -20, opacity: 0 }}

@@ -20,6 +20,7 @@ import KnowledgeCentre from "./pages/KnowledgeCentre";
 import NriCorner from "./pages/NriCorner";
 import AdvisorCorner from "./pages/AdvisorCorner";
 import UsefulLinks from "./pages/UsefulLinks";
+import Media from "./pages/Media";
 import Careers from "./pages/Careers";
 import Feedback from "./pages/Feedback";
 import Contact from "./pages/Contact";
@@ -74,6 +75,7 @@ const App = () => (
             <Route path="/nri-corner" element={<NriCorner />} />
             <Route path="/advisor-corner" element={<AdvisorCorner />} />
             <Route path="/useful-links" element={<UsefulLinks />} />
+            <Route path="/media" element={<Media />} />
             <Route path="/latest-nav" element={<LatestNAV />} />
             {/* <Route path="/recent-dividends" element={<RecentDividends />} /> */}
             <Route path="/check-kyc" element={<CheckKYC />} />

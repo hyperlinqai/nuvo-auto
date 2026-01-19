@@ -64,6 +64,7 @@ const resourceCategories = [
             { name: "KFintech KRA", url: "https://www.kfintech.com" },
             { name: "Check PAN Card Status", url: "https://tin.tin.proteantech.in/pantan/StatusTrack.html" },
             { name: "Check Aadhaar Card Status", url: "https://myaadhaar.uidai.gov.in/CheckAadhaar" },
+            { name: "Check Aadhaar & PAN Link Status", url: "https://eportal.incometax.gov.in/iec/foservices/#/pre-login/link-aadhaar-status" },
         ]
     }
 ];

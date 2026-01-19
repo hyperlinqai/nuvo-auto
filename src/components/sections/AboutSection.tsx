@@ -118,7 +118,7 @@ const AboutSection = () => {
           />
           <StatCard
             icon={<Users className="w-8 h-8" />}
-            number="8000+"
+            number="4000+"
             label="Happy Clients"
             delay={0.4}
             isInView={isInView}
