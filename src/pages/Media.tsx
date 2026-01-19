@@ -92,7 +92,7 @@ const Media = () => {
                                             <img
                                                 src={item.image}
                                                 alt={item.title}
-                                                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                                 <div className="bg-white/20 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
