@@ -1,4 +1,6 @@
 import { useState, useMemo } from "react";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import taxImage from "@/assets/images/calculators/tax.png";
 import CalculatorLayout from "@/components/calculators/CalculatorLayout";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -70,7 +72,7 @@ const TaxCalculator = () => {
     return (
         <CalculatorLayout
             title="Income Tax Calculator"
-            description="Estimate your Income Tax liability under the New Tax Regime (FY 2024-25)."
+            description="Estimate your tax liability under Old vs New Regime."
         >
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-8">

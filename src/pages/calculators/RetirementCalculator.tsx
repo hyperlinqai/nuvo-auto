@@ -4,6 +4,7 @@ import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import retirementImage from "@/assets/images/calculators/retirement.png";
 
 const RetirementCalculator = () => {
     const [currentAge, setCurrentAge] = useState(30);
@@ -54,8 +55,8 @@ const RetirementCalculator = () => {
 
     return (
         <CalculatorLayout
-            title="Retirement Planning"
-            description="Estimate the corpus you need to maintain your lifestyle after retirement."
+            title="Retirement Calculator"
+            description="Plan for your dream retirement. Calculate how much you need to save."
         >
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-6">

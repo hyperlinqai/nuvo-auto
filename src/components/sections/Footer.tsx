@@ -184,32 +184,55 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-16 pt-12 border-t border-white/5 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="mt-16 pt-12 border-t border-white/5"
           >
-            <div>
-              <h5 className="text-white font-medium mb-3">Visit Us</h5>
-              <address className="not-italic text-slate-400 text-sm leading-relaxed font-light">
-                409 & 411, Shalimar Corporate Centre<br />
-                Beside Cosmos Bank, South Tukoganj<br />
-                Indore – 452001 (M.P)
-              </address>
-            </div>
-            <div>
-              <h5 className="text-white font-medium mb-3">Contact</h5>
-              <div className="space-y-2">
-                <a href="mailto:support@satsfinserv.in" className="block text-slate-400 hover:text-white transition-colors text-sm">
-                  support@satsfinserv.in
-                </a>
-                <a href="tel:+919009999833" className="block text-slate-400 hover:text-white transition-colors text-sm">
-                  +91-9009999833
-                </a>
+            {/* Office Addresses */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              <div>
+                <h5 className="text-white font-medium mb-3">Head Office - Indore</h5>
+                <address className="not-italic text-slate-400 text-sm leading-relaxed font-light">
+                  409 & 411, Shalimar Corporate Centre<br />
+                  Beside Cosmos Bank, South Tukoganj<br />
+                  Indore – 452001 (M.P)
+                </address>
+              </div>
+              <div>
+                <h5 className="text-white font-medium mb-3">Bhopal Branch</h5>
+                <address className="not-italic text-slate-400 text-sm leading-relaxed font-light">
+                  HIG 10, Rishi Nagar, Char Imli,<br />
+                  Behind Akshay Heart Hospital,<br />
+                  Bhopal (M.P) 462016
+                </address>
+              </div>
+              <div>
+                <h5 className="text-white font-medium mb-3">Dewas Branch</h5>
+                <address className="not-italic text-slate-400 text-sm leading-relaxed font-light">
+                  45/A Kalani Bagh,<br />
+                  Behind ICICI Bank,<br />
+                  Dewas (M.P) 455001
+                </address>
               </div>
             </div>
-            <div>
-              <h5 className="text-white font-medium mb-3">Important</h5>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Mutual Fund investments are subject to market risks, read all scheme related documents carefully.
-              </p>
+
+            {/* Contact & Disclaimer */}
+            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/5">
+              <div>
+                <h5 className="text-white font-medium mb-3">Contact</h5>
+                <div className="space-y-2">
+                  <a href="mailto:support@satsfinserv.in" className="block text-slate-400 hover:text-white transition-colors text-sm">
+                    support@satsfinserv.in
+                  </a>
+                  <a href="tel:+919009999833" className="block text-slate-400 hover:text-white transition-colors text-sm">
+                    +91-9009999833
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h5 className="text-white font-medium mb-3">Important</h5>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Mutual Fund investments are subject to market risks, read all scheme related documents carefully.
+                </p>
+              </div>
             </div>
           </motion.div>
 

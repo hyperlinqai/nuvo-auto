@@ -14,17 +14,17 @@ const forms = [
         category: "KYC"
     },
     {
-        id: "form-a",
-        name: "Common Transaction Form A",
-        description: "General purpose transaction form for purchase, redemption, or switching of units.",
-        file: "form-a.pdf",
+        id: "switch-slip",
+        name: "Switch Transaction Slip",
+        description: "Form for switching your investment from one scheme to another within the same fund house.",
+        file: "Switch Transaction Slip.pdf",
         category: "Transaction"
     },
     {
-        id: "form-b",
-        name: "Common Transaction Form B",
-        description: "Additional transaction form for specific fund houses or systematic plans.",
-        file: "form-b.pdf",
+        id: "additional-purchase",
+        name: "Additional Purchase Transaction Slip",
+        description: "Form for making additional investments in existing mutual fund folios.",
+        file: "Aditional Purchase Transaction slip.pdf",
         category: "Transaction"
     }
 ];
@@ -86,7 +86,7 @@ const Downloads = () => {
 
                                         <Button
                                             variant="outline"
-                                            className="w-full gap-2 border-slate-200 hover:border-primary hover:text-primary transition-colors"
+                                            className="w-full gap-2"
                                             onClick={() => window.open(`/forms/${form.file}`, "_blank")}
                                         >
                                             Download PDF <Download className="w-4 h-4" />

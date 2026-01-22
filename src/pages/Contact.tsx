@@ -137,14 +137,14 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    {/* Address */}
+                                    {/* Head Office - Indore */}
                                     <div className="bg-card p-8 rounded-2xl border border-border/50 shadow-sm">
                                         <div className="flex items-start gap-5">
                                             <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                                                 <MapPin className="w-5 h-5 text-primary" />
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold text-xl mb-2">Visit Our Office</h3>
+                                                <h3 className="font-semibold text-xl mb-1">Head Office - Indore</h3>
                                                 <address className="not-italic text-muted-foreground leading-relaxed mb-4">
                                                     409 & 411, Shalimar Corporate Centre<br />
                                                     Beside Cosmos Bank<br />
@@ -162,8 +162,45 @@ const Contact = () => {
                                                 allowFullScreen
                                                 loading="lazy"
                                                 referrerPolicy="no-referrer-when-downgrade"
-                                                title="Office Location"
+                                                title="Indore Office Location"
                                             ></iframe>
+                                        </div>
+                                    </div>
+
+                                    {/* Branch Offices */}
+                                    <div className="grid sm:grid-cols-2 gap-6">
+                                        {/* Bhopal Branch */}
+                                        <div className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm">
+                                            <div className="flex items-start gap-4">
+                                                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                                                    <MapPin className="w-5 h-5 text-secondary" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="font-semibold text-lg mb-1">Bhopal Branch</h3>
+                                                    <address className="not-italic text-muted-foreground text-sm leading-relaxed">
+                                                        HIG 10, Rishi Nagar, Char Imli,<br />
+                                                        Behind Akshay Heart Hospital,<br />
+                                                        Bhopal (M.P) 462016
+                                                    </address>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Dewas Branch */}
+                                        <div className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm">
+                                            <div className="flex items-start gap-4">
+                                                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                                                    <MapPin className="w-5 h-5 text-secondary" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="font-semibold text-lg mb-1">Dewas Branch</h3>
+                                                    <address className="not-italic text-muted-foreground text-sm leading-relaxed">
+                                                        45/A Kalani Bagh,<br />
+                                                        Behind ICICI Bank,<br />
+                                                        Dewas (M.P) 455001
+                                                    </address>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

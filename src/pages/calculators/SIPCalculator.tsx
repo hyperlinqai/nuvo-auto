@@ -4,9 +4,14 @@ import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
+import sipImage from "@/assets/images/calculators/sip.png";
 
 const SIPCalculator = () => {
     const [monthlyInvestment, setMonthlyInvestment] = useState(5000);
+    // ... (omitting unchanged lines for brevity in thought, but tool needs exact context)
+    // Wait, I can't skip lines in replacement content unless I match them.
+    // Better to do 2 separate edits or use multi_replace.
+    // Let's use multi_replace for cleaner distinct edits (import + prop).
     const [expectedReturn, setExpectedReturn] = useState(12);
     const [timePeriod, setTimePeriod] = useState(10);
 

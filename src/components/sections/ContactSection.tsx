@@ -82,29 +82,75 @@ const ContactSection = () => {
               discuss how we can assist with your mutual fund requirements.
             </p>
 
-            {/* Address Card */}
+            {/* Head Office - Indore */}
             <motion.div
               whileHover={{ scale: 1.02, y: -4 }}
-              className="bg-card rounded-2xl p-8 shadow-[var(--shadow-lg)] border border-border/50 mb-8"
+              className="bg-card rounded-2xl p-8 shadow-[var(--shadow-lg)] border border-border/50 mb-6"
             >
               <div className="flex items-start gap-5">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-xl text-foreground mb-3">
-                    SATS FINSERV Pvt Ltd
+                  <h3 className="font-semibold text-xl text-foreground mb-1">
+                    Head Office - Indore
                   </h3>
                   <address className="not-italic text-muted-foreground leading-relaxed">
                     409 & 411, Shalimar Corporate Centre<br />
                     Beside Cosmos Bank<br />
                     South Tukoganj, Behind High Court<br />
-                    Indore – 452001 (M.P)<br />
-                    India
+                    Indore – 452001 (M.P), India
                   </address>
                 </div>
               </div>
             </motion.div>
+
+            {/* Branch Offices */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              {/* Bhopal Branch */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -2 }}
+                className="bg-card rounded-xl p-5 shadow-[var(--shadow-md)] border border-border/50"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-base text-foreground mb-1">
+                      Bhopal Branch
+                    </h4>
+                    <address className="not-italic text-muted-foreground text-sm leading-relaxed">
+                      HIG 10, Rishi Nagar, Char Imli,
+                      Behind Akshay Heart Hospital,
+                      Bhopal (M.P) 462016
+                    </address>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Dewas Branch */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -2 }}
+                className="bg-card rounded-xl p-5 shadow-[var(--shadow-md)] border border-border/50"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-base text-foreground mb-1">
+                      Dewas Branch
+                    </h4>
+                    <address className="not-italic text-muted-foreground text-sm leading-relaxed">
+                      45/A Kalani Bagh,<br />
+                      Behind ICICI Bank,<br />
+                      Dewas (M.P) 455001
+                    </address>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
 
             {/* Contact Methods */}
             <div className="space-y-4">

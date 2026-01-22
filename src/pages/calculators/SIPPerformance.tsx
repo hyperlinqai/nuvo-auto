@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import CalculatorLayout from "@/components/calculators/CalculatorLayout";
 import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
+import performanceImage from "@/assets/images/calculators/performance.png";
 import { Label } from "@/components/ui/label";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
@@ -53,8 +54,8 @@ const SIPPerformance = () => {
 
     return (
         <CalculatorLayout
-            title="Step-up SIP Calculator"
-            description="See how increasing your SIP amount annually helps you build a bigger corpus."
+            title="SIP Performance Calculator"
+            description="Check the historical returns of SIPs in various mutual fund schemes."
         >
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-8">

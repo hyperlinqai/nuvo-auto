@@ -1,65 +1,100 @@
-import { useEffect, useRef, memo } from 'react';
+import { memo, useMemo } from 'react';
+import { useStockData } from '@/hooks/useStockData';
+import { TrendingUp, TrendingDown } from 'lucide-react';
 
 const MarketTicker = () => {
-    const container = useRef<HTMLDivElement>(null);
+    const { stocks, isLoading } = useStockData(60000); // Refresh every minute
 
-    useEffect(() => {
-        if (!container.current) return;
+    // Duplicate stocks for seamless infinite scroll
+    const displayStocks = useMemo(() => {
+        if (stocks.length === 0) return [];
+        // Triple the array for smooth infinite scrolling
+        return [...stocks, ...stocks, ...stocks];
+    }, [stocks]);
 
-        // Check if script already exists to prevent duplicates
-        if (container.current.querySelector('script')) return;
+    // Format price with Indian locale
+    const formatPrice = (price: number): string => {
+        return new Intl.NumberFormat('en-IN', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        }).format(price);
+    };
 
-        const script = document.createElement("script");
-        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
-        script.type = "text/javascript";
-        script.async = true;
-        script.innerHTML = JSON.stringify({
-            "symbols": [
-                {
-                    "description": "Nifty 50",
-                    "proName": "NSE:NIFTY"
-                },
-                {
-                    "description": "Sensex",
-                    "proName": "BSE:SENSEX"
-                },
-                {
-                    "description": "S&P 500",
-                    "proName": "OANDA:SPX500USD"
-                },
-                {
-                    "description": "Nasdaq 100",
-                    "proName": "OANDA:NAS100USD"
-                },
-                {
-                    "description": "FTSE 100",
-                    "proName": "OANDA:UK100GBP"
-                },
-                {
-                    "description": "Nikkei 225",
-                    "proName": "OANDA:JP225USD"
-                },
-                {
-                    "description": "Gold",
-                    "proName": "TVC:GOLD"
-                },
-                {
-                    "description": "USD/INR",
-                    "proName": "FX_IDC:USDINR"
-                }
-            ],
-            "showSymbolLogo": true,
-            "colorTheme": "light",
-            "isTransparent": false,
-            "displayMode": "adaptive",
-            "locale": "in"
-        });
-        container.current.appendChild(script);
-    }, []);
+    // Format percentage change
+    const formatPercentChange = (change: number): string => {
+        const sign = change >= 0 ? '+' : '';
+        return `${sign}${change.toFixed(2)}%`;
+    };
+
+    if (isLoading && stocks.length === 0) {
+        return (
+            <div className="h-[32px] bg-gradient-to-r from-slate-900 to-slate-800 flex items-center justify-center">
+                <div className="flex items-center gap-2 text-white/60 text-xs">
+                    <div className="w-3 h-3 border-2 border-white/30 border-t-white/80 rounded-full animate-spin" />
+                    <span>Loading market data...</span>
+                </div>
+            </div>
+        );
+    }
 
     return (
-        <div className="tradingview-widget-container h-[32px] overflow-hidden" ref={container}>
-            <div className="tradingview-widget-container__widget"></div>
+        <div className="h-[32px] bg-gradient-to-r from-slate-900 to-slate-800 overflow-hidden relative">
+            {/* Gradient fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-slate-800 to-transparent z-10 pointer-events-none" />
+
+            {/* Scrolling ticker container */}
+            <div className="ticker-scroll flex items-center h-full whitespace-nowrap">
+                {displayStocks.map((stock, index) => (
+                    <div
+                        key={`${stock.symbol}-${index}`}
+                        className="inline-flex items-center gap-2 px-4 border-r border-white/10"
+                    >
+                        {/* Stock symbol/name */}
+                        <span className="text-white/90 text-xs font-semibold tracking-wide">
+                            {stock.symbol}
+                        </span>
+
+                        {/* Price */}
+                        <span className="text-white text-xs font-medium">
+                            ₹{formatPrice(stock.price)}
+                        </span>
+
+                        {/* Change indicator */}
+                        <span
+                            className={`flex items-center gap-0.5 text-xs font-medium ${stock.isPositive ? 'text-emerald-400' : 'text-red-400'
+                                }`}
+                        >
+                            {stock.isPositive ? (
+                                <TrendingUp className="w-3 h-3" />
+                            ) : (
+                                <TrendingDown className="w-3 h-3" />
+                            )}
+                            {formatPercentChange(stock.percentChange)}
+                        </span>
+                    </div>
+                ))}
+            </div>
+
+            {/* CSS Animation */}
+            <style>{`
+        @keyframes ticker-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
+        
+        .ticker-scroll {
+          animation: ticker-scroll 30s linear infinite;
+        }
+        
+        .ticker-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
         </div>
     );
 };

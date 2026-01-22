@@ -4,6 +4,7 @@ import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import homeloanImage from "@/assets/images/calculators/homeloan.png";
 
 const HomeLoanCalculator = () => {
     const [loanAmount, setLoanAmount] = useState(5000000);
@@ -42,7 +43,7 @@ const HomeLoanCalculator = () => {
     return (
         <CalculatorLayout
             title="Home Loan EMI Calculator"
-            description="Calculate your monthly EMI and view the breakup of principal vs interest."
+            description="Calculate your monthly home loan EMI and total interest payable."
         >
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-8">

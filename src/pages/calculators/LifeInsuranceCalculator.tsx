@@ -3,6 +3,7 @@ import CalculatorLayout from "@/components/calculators/CalculatorLayout";
 import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import lifeInsuranceImage from "@/assets/images/calculators/life-insurance.png";
 
 const LifeInsuranceCalculator = () => {
     const [monthlyIncome, setMonthlyIncome] = useState(50000);
@@ -52,7 +53,7 @@ const LifeInsuranceCalculator = () => {
     return (
         <CalculatorLayout
             title="Life Insurance Calculator"
-            description="Calculate your Human Life Value (HLV) to know how much Life Insurance cover you actually need."
+            description="Calculate the life insurance coverage you need to secure your family's future."
         >
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-8">

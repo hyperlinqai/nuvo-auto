@@ -4,6 +4,7 @@ import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import lumpsumImage from "@/assets/images/calculators/lumpsum.png";
 
 const LumpsumCalculator = () => {
     const [totalInvestment, setTotalInvestment] = useState(100000);

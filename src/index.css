@@ -136,9 +136,19 @@
     @apply px-4 py-20 md:px-8 md:py-28 lg:px-16;
   }
 
-  /* Hero section padding - accounts for fixed header */
+  /* Hero section padding - accounts for fixed header + market ticker */
   .hero-section-padding {
-    @apply pt-36 pb-16 md:pt-40 md:pb-24 px-4 md:px-8 lg:px-16;
+    @apply pt-44 pb-16 md:pt-48 md:pb-24 px-4 md:px-8 lg:px-16;
+  }
+
+  /* Global Button Overrides for consistency */
+  button {
+    @apply cursor-pointer;
+  }
+  
+  /* Ensure all buttons have legible text by default if not overridden */
+  button:not([class*="text-"]) {
+    @apply text-slate-900 dark:text-slate-100;
   }
 
   .container-narrow {

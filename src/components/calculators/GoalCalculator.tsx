@@ -10,9 +10,10 @@ interface GoalCalculatorProps {
     defaultCost: number;
     defaultYears: number;
     inflationInput?: number;
+    imageSrc?: string;
 }
 
-const GoalCalculator = ({ title, description, defaultCost, defaultYears, inflationInput = 6 }: GoalCalculatorProps) => {
+const GoalCalculator = ({ title, description, defaultCost, defaultYears, inflationInput = 6, imageSrc }: GoalCalculatorProps) => {
     const [currentCost, setCurrentCost] = useState(defaultCost);
     const [yearsInfo, setYearsInfo] = useState(defaultYears);
     const [inflation, setInflation] = useState(inflationInput);
@@ -48,7 +49,7 @@ const GoalCalculator = ({ title, description, defaultCost, defaultYears, inflati
     };
 
     return (
-        <CalculatorLayout title={title} description={description}>
+        <CalculatorLayout title={title} description={description} imageSrc={imageSrc}>
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-8">
                     <div className="space-y-4">

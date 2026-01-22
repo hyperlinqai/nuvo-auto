@@ -13,6 +13,7 @@ interface CalculatorLayoutProps {
     children: ReactNode;
     seoTitle?: string;
     seoDescription?: string;
+    imageSrc?: string;
 }
 
 const CalculatorLayout = ({
@@ -20,7 +21,8 @@ const CalculatorLayout = ({
     description,
     children,
     seoTitle,
-    seoDescription
+    seoDescription,
+    imageSrc
 }: CalculatorLayoutProps) => {
     const navigate = useNavigate();
 
@@ -56,12 +58,23 @@ const CalculatorLayout = ({
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="text-center mb-10 md:mb-14"
+                            className={`mb-10 md:mb-14 ${imageSrc ? 'grid md:grid-cols-2 gap-8 items-center text-left' : 'text-center'}`}
                         >
-                            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">{title}</h1>
-                            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                                {description}
-                            </p>
+                            <div>
+                                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">{title}</h1>
+                                <p className="text-lg text-slate-600 leading-relaxed">
+                                    {description}
+                                </p>
+                            </div>
+                            {imageSrc && (
+                                <div className="hidden md:flex justify-center">
+                                    <img
+                                        src={imageSrc}
+                                        alt={title}
+                                        className="w-full max-w-[320px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            )}
                         </motion.div>
 
                         <motion.div

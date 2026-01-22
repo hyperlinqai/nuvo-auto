@@ -1,3 +1,5 @@
+import { ArrowUpRight, TrendingUp, Calendar, Building2 } from "lucide-react";
+import performanceImage from "@/assets/images/calculators/performance.png";
 import { useState } from "react";
 import CalculatorLayout from "@/components/calculators/CalculatorLayout";
 import { Input } from "@/components/ui/input";
@@ -19,8 +21,8 @@ const FundPerformance = () => {
 
     return (
         <CalculatorLayout
-            title="CAGR Calculator"
-            description="Calculate the Compounded Annual Growth Rate (CAGR) of your investments."
+            title="Fund Performance"
+            description="Track and analyze the performance of top mutual funds."
         >
             <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                 <div className="space-y-6">
