@@ -33,7 +33,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-start md:items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start md:items-center overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -112,8 +112,8 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-3 md:gap-6"
           >
             {[
-              { icon: Award, text: "20+ Years Experience" },
-              { icon: Users, text: "200+ Clients Served" },
+              { icon: Award, text: "9+ Years Experience" },
+              { icon: Users, text: "4000+ Clients Served" },
               { icon: Clock, text: "Process Driven Approach" },
             ].map((badge, index) => {
               const Icon = badge.icon;

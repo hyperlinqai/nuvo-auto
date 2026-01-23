@@ -97,7 +97,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <StatCard
             icon={<TrendingUp className="w-8 h-8" />}
-            number="20+"
+            number="9+"
             label="Years of Experience"
             delay={0.1}
             isInView={isInView}

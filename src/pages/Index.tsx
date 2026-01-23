@@ -15,21 +15,21 @@ const Index = () => {
         <title>Mutual Fund Distributor in Indore | Sats Finserv</title>
         <meta
           name="description"
-          content="Sats Finserv is a trusted mutual fund distributor in Indore with 20+ years of experience, supporting investors through transparent processes and long term service."
+          content="Sats Finserv is a trusted mutual fund distributor in Indore with 9+ years of experience, supporting investors through transparent processes and long term service."
         />
         <meta name="keywords" content="mutual fund distributor indore, AMFI registered distributor, mutual fund services, sats finserv" />
         <link rel="canonical" href="https://satsfinserv.com" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Sats Finserv - Trusted Mutual Fund Distributor in Indore" />
-        <meta property="og:description" content="AMFI registered mutual fund distributor with 20+ years of experience serving investors in Indore." />
+        <meta property="og:description" content="AMFI registered mutual fund distributor with 9+ years of experience serving investors in Indore." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://satsfinserv.com" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sats Finserv - Mutual Fund Distributor" />
-        <meta name="twitter:description" content="Trusted mutual fund distribution services in Indore with 20+ years of experience." />
+        <meta name="twitter:description" content="Trusted mutual fund distribution services in Indore with 9+ years of experience." />
       </Helmet>
 
       <div className="min-h-screen">

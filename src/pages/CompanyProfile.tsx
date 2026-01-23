@@ -44,8 +44,8 @@ const teamMembers = [
 
 const stats = [
   { icon: Building2, value: "2017", label: "Established" },
-  { icon: Users, value: "1500+", label: "Families Served" },
-  { icon: Award, value: "35+", label: "Years Experience" },
+  { icon: Users, value: "4000+", label: "Families Served" },
+  { icon: Award, value: "9+", label: "Years Experience" },
 ];
 
 const CompanyProfile = () => {
@@ -88,7 +88,7 @@ const CompanyProfile = () => {
                   SATS FINSERV Private Limited
                 </h1>
                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                  Established in 2017, SATS FINSERV is an AMFI registered Mutual Fund Distributor with 35+ years of combined experience, serving 1500+ families across India and abroad.
+                  Established in 2017, SATS FINSERV is an AMFI registered Mutual Fund Distributor with 9+ years of experience, serving 4000+ families across India and abroad.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Button
@@ -165,14 +165,14 @@ const CompanyProfile = () => {
                   <h3 className="text-2xl font-semibold text-foreground mb-4">Who We Are</h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     SATS FINSERV Pvt Ltd is registered with AMFI as a Mutual Fund Distributor. With a
-                    combined experience of more than 35+ years in Risk Management and Investment
+                    combined experience of more than 9+ years in Risk Management and Investment
                     Management, the team offers financial services to HNIs, corporates, and family run
                     businesses.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     Success is measured by helping clients meet their financial goals and objectives.
                     SATS FINSERV facilitates well researched financial products and currently works
-                    with 1500+ families across India and abroad.
+                    with 4000+ families across India and abroad.
                   </p>
                 </motion.div>
 
@@ -195,7 +195,7 @@ const CompanyProfile = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                      <span>35+ years of combined risk and investment management experience</span>
+                      <span>9+ years of combined risk and investment management experience</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
@@ -203,7 +203,7 @@ const CompanyProfile = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                      <span>1500+ families served across India and abroad</span>
+                      <span>4000+ families served across India and abroad</span>
                     </li>
                   </ul>
                 </motion.div>

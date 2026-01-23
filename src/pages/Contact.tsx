@@ -120,7 +120,7 @@ const Contact = () => {
                                                 <Phone className="w-5 h-5 text-primary" />
                                             </div>
                                             <h3 className="font-semibold text-lg mb-2">Call Us</h3>
-                                            <p className="text-muted-foreground text-sm mb-1">Mon-Fri from 8am to 5pm</p>
+                                            <p className="text-muted-foreground text-sm mb-1">Mon-Fri from 10 AM to 6 PM</p>
                                             <a href="tel:+919009999833" className="text-foreground font-medium hover:text-primary transition-colors">
                                                 +91-9009999833
                                             </a>
